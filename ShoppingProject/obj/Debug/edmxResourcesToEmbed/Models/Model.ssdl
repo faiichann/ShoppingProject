@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShopDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbItem">
+    <Key>
+      <PropertyRef Name="It_Id" />
+    </Key>
+    <Property Name="It_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="It_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="It_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="It_Des" Type="nvarchar" MaxLength="150" />
+    <Property Name="It_Img" Type="nvarchar(max)" />
+    <Property Name="It_Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="It_Qty" Type="int" />
+    <Property Name="Type_Id" Type="int" />
+    <Property Name="It_Valid" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbType">
+    <Key>
+      <PropertyRef Name="Type_Id" />
+    </Key>
+    <Property Name="Type_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbUser">
+    <Key>
+      <PropertyRef Name="U_Id" />
+    </Key>
+    <Property Name="U_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="U_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="U_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="U_Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="U_Address" Type="nvarchar" MaxLength="150" />
+    <Property Name="U_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="U_Isvalid" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="ShopDBModelStoreContainer">
+    <EntitySet Name="tbItem" EntityType="Self.tbItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbType" EntityType="Self.tbType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbUser" EntityType="Self.tbUser" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

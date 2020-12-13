@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@if (Session["UserID"] != null)
+{
+<div>
+    <h2>Welcome : <a href="#">@Session["UserName"]</a></h2><br />
+    <h3>@Session["UserEmail"]</h3><br />
+    <h3>@Session["UserAddress"]</h3><br />
+    <h3>@Session["UserPhone"]</h3><br />
+
+    <div>
+        <h1><a href="/Shop/Index">Shopping</a></h1>
+    </div>
+    <div>
+        <h1><a href="/Login/Profile">Edit Profile</a></h1>
+    </div>
+    <a href="/Login/Logout">Logout</a>
+</div>
+}
