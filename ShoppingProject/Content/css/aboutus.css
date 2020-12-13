@@ -1,0 +1,304 @@
+﻿body {
+    background-color: rgba(178, 255, 164,0.1);
+}
+.aboutbg1 {
+    position: absolute;
+    margin-left:-14%;
+}
+
+.aboutbg2 {
+    position: absolute;
+    margin-left: 78.5%;
+    margin-top: -4%;
+}
+
+p.about-header {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.4vw;
+    line-height: 108px;
+    color: #435E39;
+    text-align:center;
+    margin-top:7%;
+}
+
+p.about-des {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5vw;
+    line-height: 174.5%;
+    text-align: center;
+    color: #435E39;
+}
+
+p.about-smile {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2vw;
+    line-height: 72px;
+    color: #435E39;
+    text-align:center;
+    margin-top:4%;
+}
+
+img.aboutpic {
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    transition: transform .25s;
+    width:100%;
+}
+
+    img.aboutpic:hover {
+        -ms-transform: scale(1.08); /* IE 9 */
+        -webkit-transform: scale(1.08); /* Safari 3-8 */
+        transform: scale(1.08);
+    }
+
+.about-img-ourteam {
+    background-image: linear-gradient(rgba(0,0,0.4),rgba(0,0,0.4)),url(../lib/images/bgourteam.png);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    
+}
+
+p.about-our-header {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.1vw;
+    line-height: 72px;
+    text-align: center;
+    color: #435E39;
+    margin-top:5%;
+}
+
+.grid-container-aboutus {
+    display:grid;
+    grid-template-columns:auto auto auto auto;
+    padding:20px;
+    padding-left:75px;
+}
+
+.card {
+    width: 80%;
+    background-color: #FFFFFF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius:17px;
+}
+
+img.img-team {
+    width: 60%;
+    border-radius: 100%;
+    max-width: 100%;
+    margin-left: 22%;
+    position:relative;
+}
+
+
+p.about-duty {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4vw;
+    line-height: 54px;
+    text-align: center;
+    color: #435E39;
+}
+
+p.about-teamdetail {
+    display: inline;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9vw;
+    line-height: 174.5%;
+    color: #435E39;
+    margin-left: 6%;
+    margin-top: -6%;
+}
+
+img.aboutimgicon {
+    width: 10%;
+    border-radius: 100%;
+    border: none;
+    margin-top: -2%;
+    margin-right:3%;
+}
+
+
+@media screen and (max-width:991px) {
+    .aboutbg1 {
+        margin-left:-18%;
+    }
+    .aboutbg2 {
+        margin-left:72.5%;
+    }
+}
+
+@media screen and (max-width:962px) {
+    .card {
+        width: 100%;
+        margin-left: -13%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .aboutbg2 {
+        margin-left:74.5%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .aboutbg2 {
+        margin-left:76.5%;
+    }
+    .card {
+        margin-left:-18%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .aboutbg2 {
+        margin-left:66.5%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .card {
+        margin-left:-27%;
+        width:110%;
+    }
+    
+    .aboutbg2 {
+        margin-left:68.5%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .aboutbg2 {
+        margin-left:72.5%;
+    }
+    .aboutbg1 {
+        margin-left:-23%;
+    }
+
+    .grid-container-aboutus {
+        grid-template-columns: repeat(2,auto);
+        grid-gap: 40px 0px;
+    }
+
+    .card {
+        margin-left: -5%;
+        width: 90%;
+    }
+
+    p.about-header {
+        font-size:4vw;
+    }
+    p.about-des {
+        font-size:2vw;
+    }
+    p.about-smile {
+        font-size:3vw;  
+    }
+    p.about-our-header {
+        font-size:3vw;
+    }
+    p.about-duty {
+        font-size:2.5vw;
+    }
+    p.about-teamdetail {
+        font-size:1.6vw;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .about-img-ourteam {
+        width:110%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .aboutbg1 {
+        margin-left:-28%;
+    }
+    .card {
+        width:110%;
+        margin-left:-12%;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .card {
+        width:130%;
+        margin-left:-42%;
+    }
+    .aboutbg1 {
+        margin-left: -30%;
+        margin-top: -20%;
+    }
+    .aboutbg2 {
+        margin-left:64%;
+    }
+    .grid-container-aboutus {
+        grid-gap: 30px 20px;
+    }
+    p.about-header {
+        font-size:6vw;
+    }
+    p.about-des {
+        font-size:3.4vw;
+    }
+    p.about-smile {
+        font-size:5vw;
+    }
+    img.aboutpic {
+        width: 130%;
+        border-radius: 15px;
+    }
+    p.about-our-header {
+        font-size:5vw;
+    }
+    p.about-duty {
+        font-size:3.7vw;
+    }
+    p.about-teamdetail {
+        font-size:2.2vw;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .about-img-ourteam {
+        width:120%;
+    }
+    .card {
+        margin-left:-32%;
+    }
+}
+
+@media screen and (max-width:300px) {
+
+    .aboutbg1, .aboutbg2 {
+        display:none;
+    }
+
+    .grid-container-aboutus {
+        grid-template-columns :repeat(1,auto);
+    }
+    .card {
+        width:90%;
+        margin-left:-7%;
+    }
+    .about-img-ourteam {
+        width:100%;
+    }
+}

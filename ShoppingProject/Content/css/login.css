@@ -1,0 +1,154 @@
+﻿@media screen and (max-width:1200px) {
+    .button-box {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .form-box {
+        width:80%;
+    }
+    .container {
+        max-width:90%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .form-box {
+        width:45%
+    }
+}
+
+@media screen and (max-width:991px) {
+    .form-box {
+        width:65%;
+
+    }
+}
+
+@media screen and (max-width:580px) {
+    .form-box {
+        width:70%;
+    }
+    .col-2 {
+        margin-right:4%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .container {
+        max-width:100%;
+    }
+    .form-box {
+        width:80%;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .toggle-btn {
+        padding:5px 10px !important;
+    }
+    #btn {
+        width:70px!important;
+    }
+}
+
+.hero {
+    height:721px;
+    width:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+.form-box {
+    height: 430px;
+    position: relative;
+    margin: 6% auto;
+    background-color: #FFFFFF
+}
+
+.container {
+    padding-top:15px;
+}
+
+.col-2 {
+    max-width:50%;
+    margin-right:20%;
+}
+
+.button-box {
+    width: 189%;
+    margin-right: 20%;
+    position: relative;
+    box-shadow: 0 0 20px 1px #71ebd5;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn {
+    top:0;
+    left:0;
+    position:absolute;
+    width:110px;
+    height:100%;
+    background:linear-gradient(to right, #00ff90,#b6ff00);
+    border-radius:30px;
+    transition:0.5s;
+}
+
+.social-icon {
+    margin:30px auto;
+    text-align:center;
+}
+.social-icon img {
+    width:30px;
+    margin:0 12px;
+    box-shadow:0 0 20px 0 #ff6a00;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.col-3-icon {
+    max-width:100%;
+}
+
+.input-grouplogin {
+    top:0;
+    right:15%;
+    position:absolute;
+    width:70%;
+    transition:0.5s;
+}
+.input-field {
+    width:100%;
+    padding :10px 0;
+    margin:5px 0;
+    border-left:0;
+    border-top:0;
+    border-right:0;
+    border-bottom:1px solid #ffbb00;
+    outline : none;
+    background :transparent;
+}
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #00ff90,#b6ff00);
+    border:0;
+    outline :none;
+    border-radius:30px;
+}

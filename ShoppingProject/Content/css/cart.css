@@ -1,0 +1,46 @@
+﻿th.orderth {
+    font-family: Kanit;
+    width: 1%;
+    display: table-cell;
+}
+table.ordertable {
+    height: 350px;
+    display: block;
+    overflow-y: auto;
+}
+.deletetable {
+    border-collapse: collapse;
+    width: 100%;
+}
+.intable1 {
+    font-family:Kanit;
+    text-align:center;
+    padding: 8px;
+}
+.topic:nth-child(even) {
+    background: #EFD89A;
+}
+.cardcart {
+    width: 100%;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 15px 5px rgba(0, 0, 0, 0.2);
+}
+input.numproduct{
+    width:60%;
+}
+.topfont{
+    font-family:Kanit;
+    margin-top:10%;
+}
+a.trash:hover {
+    cursor: pointer;
+    color: red;
+}
+.trash {
+    font-family: Kanit;
+    font-size: 1vw;
+    color:#435E39;
+}
+.colorfont {
+    color: #435E39;
+}

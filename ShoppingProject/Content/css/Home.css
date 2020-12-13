@@ -1,0 +1,682 @@
+﻿/* Banner1 */
+p.get {
+    max-width:100%;
+    position: absolute;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.5vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 10%;
+    margin-left:6%
+}
+
+p.perc {
+    position: absolute;
+    max-width: 100%;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.5vw;
+    line-height: 135%;
+    color: #E27902;
+    margin-top: 10%;
+    margin-left: 15%
+}
+
+p.natural {
+    max-width: 100%;
+    position: absolute;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.5vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 10%;
+    margin-left: 27%
+}
+
+p.fresh {
+    max-width: 100%;
+    position: absolute;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.5vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 16%;
+    margin-left: 6%
+}
+
+img.ban1 {
+    position:absolute;
+    width:50%;
+    height:80%;
+    margin-top:5%;
+    margin-left:47%;
+}
+
+.container-fluid {
+    position:relative;
+}
+
+p.fban1 {
+    position: absolute;
+    max-width: 100%;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top:24.5%;
+    margin-left:6%;
+}
+
+
+@media screen and (max-width:1300px) {
+    p.fban1 {
+        font-size: 1.5vw;
+    }
+
+    a.ban {
+        font-size:1.3vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+    p.fban1 {
+        font-size: 2vw;
+    }
+
+    a.ban {
+        font-size: 2.5vw;
+        border:2px;
+        margin-top:35%;
+    }
+    img.ban1 {
+        width: 35%;
+        height: 65%;
+        margin-left:60%;
+    }
+}
+
+a.ban {
+    max-width:100%;
+    height:auto;
+    display:inline-block;
+    position: absolute;
+    font-family: Kanit;
+    font-style: normal;
+    font-size:1.2vw;
+    text-align:center;
+    border: 3px solid #4C251B;
+    border-radius:14px;
+    color: #4C251B;
+    margin-top: 30%;
+    margin-left: 8%;
+    outline:none;
+    text-decoration:none;
+    padding-left:6px;
+    padding-right:7px;
+    padding-top:0.5px;
+    padding-bottom:1px;
+    cursor:pointer;
+}
+
+a.ban:hover {
+    background-color:#4C251B;
+    color: #EFD89A;
+}
+
+.scroll {
+    position:absolute;
+    margin-top:42.5%;
+    margin-left:55%;
+    max-width:100%;
+    width:2.7%;
+    height:5.5%;
+    transform:translate(-80px) translateX(-50%) rotate(45deg);
+}
+.scroll span{
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:100%;
+    height:100%;
+    border-bottom:2px solid #fff;
+    border-right:2px solid #fff;
+    animation:animate 1.5s linear infinite;
+    opacity:0;
+}
+.scroll span:nth-child(1) {
+    transform:translate(-15px,-15px);
+    animation-delay:-0.4s;
+}
+.scroll span:nth-child(2) {
+    transform:translate(0px,0px);
+    animation-delay:-0.2s;
+}
+.scroll span:nth-child(3) {
+    transform:translate(15px,15px);
+    animation-delay:0s;
+}
+@keyframes animate {
+    0% {
+        top:-5px;
+        left:-5px;
+        opacity:0;
+    }
+    25% {
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+    50%,100% {
+        top: 5px;
+        left: 5px;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .scroll {
+        opacity:0;
+    }
+}
+
+@media screen and (min-width:1560px) {
+    .scroll {
+        opacity:0;
+    }
+}
+
+/*Banner 2*/
+
+p.why {
+    position:absolute;
+    text-align:center;
+    left:37%;
+    margin-top:2%;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3vw;
+    line-height: 135%;
+    color: #4C251B;
+}
+
+img.cabbage {
+    position: absolute;
+    max-width: 100%;
+    width: 13%;
+    margin-left:30%;
+}
+
+p.always {
+    position:absolute;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top:10%;
+    margin-left:18%;
+}
+
+img.eclipse {
+    position:absolute;
+    max-width:100%;
+    width:75%;
+    margin-left:8.5%;
+    margin-top:-15%;
+}
+img.homehydro {
+    position: absolute;
+    max-width: 100%;
+    width: 75%;
+    margin-left: 2.5%;
+    margin-top: -15%;
+}
+
+img.varietyvet {
+    position: absolute;
+    max-width: 100%;
+    width: 13%;
+    margin-left: 40%;
+}
+
+p.variety {
+    position: absolute;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 16%;
+    margin-left: 20%;
+}
+
+img.homeleaf {
+    position:absolute;
+    max-width:100%;
+    width:13%;
+    margin-left:-22%;
+}
+
+p.leaf {
+    position: absolute;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 10%;
+    margin-left:-33%;
+}
+
+img.homecar {
+    position:absolute;
+    max-width:100%;
+    width:13%;
+    margin-left:89%;
+}
+p.car {
+    position: absolute;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 10%;
+    margin-left: 78%;
+}
+
+img.homemedal {
+    position: absolute;
+    max-width: 100%;
+    width: 13%;
+    margin-left: -22%;
+}
+
+p.medal {
+    position: absolute;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 10%;
+    margin-left: -38%;
+}
+
+img.homesup {
+    position: absolute;
+    max-width: 100%;
+    width: 13%;
+    margin-left: 89%;
+}
+
+p.support {
+    position: absolute;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 10%;
+    margin-left: 73%;
+}
+
+
+@media screen and (max-width:578px) {
+    p.always {
+        margin-left:12%;
+        font-size:2.3vw;
+    }
+    p.leaf {
+        margin-left:-40%;
+        font-size:2.3vw;
+    }
+    p.medal {
+        margin-left:-46%;
+        font-size:2.3vw;
+    }
+    p.variety {
+        margin-left:15%;
+        font-size:2.3vw;
+    }
+    p.car {
+        margin-left:70%;
+        font-size:2.3vw;
+    }
+    p.support {
+        margin-left:65%;
+        font-size:2.3vw;
+    }
+}
+
+@media screen and (max-width:300px) {
+    img.varietyvet{
+        margin-top:3%;
+    }
+    p.variety {
+        margin-top:32%;
+    }
+
+}
+
+@media screen and (max-width:378px) {
+    img.varietyvet {
+        margin-top: 3%;
+    }
+
+    p.variety {
+        margin-top: 32%;
+    }
+}
+
+/*Banner 3*/
+
+p.useeasy {
+    position: absolute;
+    text-align: center;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top:10%;
+    margin-left:29%;
+}
+
+img.homecir1 {
+    position:absolute;
+    width:43%;
+    margin-left:11%;
+}
+img.homebuy {
+    position: absolute;
+    width: 28%;
+    margin-left: 20%;
+    margin-top:7%;
+}
+
+p.cir1 {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.38vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 60%;
+    margin-left:20.5%;
+}
+
+img.homecir2 {
+    position: absolute;
+    width: 43%;
+    margin-left: 20%;
+}
+img.homepay {
+    position: absolute;
+    width: 28%;
+    margin-left: 28%;
+    margin-top: 7%;
+}
+
+p.cir2 {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.38vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 60%;
+    margin-left: 34.5%;
+}
+
+img.homecir3 {
+    position: absolute;
+    width: 43%;
+    margin-left: 27%;
+}
+img.homedeli {
+    position: absolute;
+    width: 28%;
+    margin-left: 35%;
+    margin-top:7%;
+}
+
+p.cir3 {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.38vw;
+    line-height: 135%;
+    color: #4C251B;
+    margin-top: 60%;
+    margin-left: 33%;
+}
+
+@media screen and (max-width:580px) {
+    p.cir1 {
+        margin-left:17%;
+        font-size:2.3vw;
+    }
+    p.cir2 {
+        margin-left:35%;
+        font-size: 2.3vw;
+    }
+    p.cir3 {
+        margin-left:28%;
+        font-size: 2.3vw;
+    }
+}
+
+@media screen and (max-width:340px) {
+    p.cir1 {
+        margin-left: 16%;
+        margin-top:76%;
+        font-size: 2.8vw;
+    }
+
+    p.cir2 {
+        margin-left: 37%;
+        margin-top:76%;
+        font-size: 2.8vw;
+    }
+
+    p.cir3 {
+        margin-left: 22%;
+        margin-top:76%;
+        font-size: 2.8vw;
+    }
+}
+
+@media screen and (max-width:410px) {
+    p.useeasy {
+        margin-left:31%;
+        margin-top:0%;
+        font-size:3.6vw;
+    }
+    img.homecir1 , img.homecir2 , img.homecir3 {
+        margin-top:-45%;
+    }
+    img.homebuy , img.homepay , img.homedeli {
+        margin-top:-38%;
+    }
+    p.cir1 , p.cir2 , p.cir3 {
+        margin-top:20%;
+    }
+}
+
+
+/*Banner 4*/
+
+p.ourproduct {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.3vw;
+    line-height: 135%;
+    text-align:center;
+    color: #4C251B;
+    margin-left:-1.5%;
+    margin-bottom:5%;
+}
+
+img.homevegetban3 {
+    position:absolute;
+    max-width:100%;
+    width:80%;
+}
+img.homevegetban3:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition:.3s;
+}
+
+img.homemeatban3 {
+    position:absolute;
+    max-width:100%;
+    width:80%;
+    margin-left:10%;
+}
+img.homemeatban3:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition:.3s;
+}
+
+img.vegetban3 {
+    position:absolute;
+    max-width:100%;
+    width:10%;
+    margin-left:35%;
+    margin-top:13%
+}
+
+img.meatban3 {
+    position: absolute;
+    max-width: 100%;
+    width: 10%;
+    margin-left: 45%;
+    margin-top: 13%
+}
+
+@media screen and (max-width:400px) {
+    p.ourproduct {
+        margin-top:-20%;
+    }
+    img.homevegetban3, img.homemeatban3 {
+        margin-top: -20%;
+    }
+    img.vegetban3, img.meatban3 {
+        margin-top:-6%;
+    }
+}
+
+@media screen and (max-width:300px) {
+    p.ourproduct {
+        margin-top: -35%;
+        font-size:2.7vw;
+    }
+
+    img.homevegetban3, img.homemeatban3 {
+        margin-top: -55%;
+        width:70%;
+    }
+
+    img.vegetban3 {
+        margin-top: -42.5%;
+        margin-left:33%;
+    }
+    img.meatban3 {
+        margin-top: -42.5%;
+        margin-left: 43%;
+    }
+}
+
+/*Footer*/
+
+footer {
+    margin-top:15%;
+}
+
+img.rectangle2 {
+    position:absolute;
+    max-width:100%;
+    width:100%;
+    max-height:40%;
+    margin-top:10%;
+}
+
+img.footersemicolon {
+    position:absolute;
+    max-width:100%;
+    width:18%;
+    margin-left:40%;
+    margin-top:14%;
+}
+
+img.homelocation {
+    position: absolute;
+    max-width: 100%;
+    width: 2%;
+    margin-left:15%;
+    margin-top: 23%;
+}
+
+img.bangkok {
+    position: absolute;
+    max-width: 100%;
+    width: 10%;
+    margin-left: 18%;
+    margin-top: 23.5%;
+}
+
+img.homephone {
+    position: absolute;
+    max-width: 100%;
+    width: 2%;
+    margin-left: 42.5%;
+    margin-top: 23%;
+}
+
+img.phone {
+    position: absolute;
+    max-width: 100%;
+    width: 8.6%;
+    margin-left: 45.2%;
+    margin-top: 23.5%;
+}
+
+img.homemail {
+    position: absolute;
+    max-width: 100%;
+    width: 2%;
+    margin-left: 67%;
+    margin-top: 22.5%;
+}
+
+img.footermail {
+    position: absolute;
+    max-width: 100%;
+    width: 16%;
+    margin-left: 70%;
+    margin-top: 23%;
+}

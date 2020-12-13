@@ -1,0 +1,668 @@
+﻿/*Personal*/
+.card1 {
+    width: 100%;
+    height: 92%;
+    background-color: #926E50;
+    box-shadow: 4px 6px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-top: 20%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+img.imgpersonal {
+    width: 80%;
+    height: 20vh;
+    object-fit: cover;
+    border-radius: 15px;
+}
+a.changeimage {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8vw;
+    line-height: 27px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+a.profilelink {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 30px;
+    outline: none;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-top: 4%;
+}
+a.profilelink:hover {
+        background-color: #FFFFFF;
+        color: #4C251B;
+        outline: none;
+        text-decoration:none;
+    }
+.card2 {
+    width: 100%;
+    height: 95%;
+    padding-top: 28px;
+    border: 4px solid #926E50;
+    border-radius: 15px;
+    box-shadow: 4px 6px 7px rgba(0, 0, 0, 0.1);
+    margin-top: 6.5%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+p.hello {
+    display: contents;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2vw;
+    line-height: 72px;
+    color: #4C251B;
+}
+p.profilenameID {
+    display: contents;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2vw;
+    line-height: 72px;
+    color: #4C251B;
+}
+p.profilepersonal {
+    display: inline;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    line-height: 39px;
+    color: #4C251B;
+}
+p.profileNoOrder {
+    display: inline;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    line-height: 39px;
+    color: #4C251B;
+    margin-left: -25%;
+}
+p.profileOrderdetail {
+    display: inline;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    line-height: 39px;
+    color: #4C251B;
+}
+a.profilechangepersonal {
+    display: inline;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9vw;
+    line-height: 27px;
+    text-align: right;
+    text-decoration-line: underline;
+    float: right;
+    color: #C36643;
+    outline: none;
+}
+img.imgchangepersonal {
+    display: inline;
+    float: right;
+    width: 13%;
+    margin-top: 5%;
+    margin-left: 3%;
+    text-decoration: none;
+    outline: none;
+    padding-right: 3px;
+}
+img.imgsavepersonal {
+    display: inline;
+    float: right;
+    width: 27%;
+    margin-top: 15%;
+    margin-left: 6%;
+    text-decoration: none;
+    outline: none;
+    padding-right: 3px;
+}
+p.profilepersonaldetail {
+    display: inline;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    line-height: 250%;
+    color: #4C251B;
+    float: left;
+    margin-top: -1%;
+}
+p.orderlistdetail1 {
+    display: inline;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    line-height: 250%;
+    color: #4C251B;
+    float: left;
+    margin-top: 5%;
+}
+p.orderlistdetail2 {
+    display: inline;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    line-height: 250%;
+    color: #4C251B;
+    float: left;
+    margin-top: 5%;
+    margin-left: -6%;
+}
+p.orderlistdetail3 {
+    display: inline;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    line-height: 250%;
+    color: #4C251B;
+    float: left;
+    margin-top: 5%;
+    margin-left: -15%;
+}
+p.profilepersonaldata {
+    display: inline;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    line-height: 250%;
+    color: #4C251B;
+    float: right;
+    padding-right: 16px;
+    margin-top: -1%;
+}
+a.profilechangepassword {
+    display: block;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9vw;
+    line-height: 27px;
+    text-align: right;
+    text-decoration-line: underline;
+    float: right;
+    color: #C36643;
+    outline: none;
+    margin-top: -3.5%;
+    padding-right: 16px;
+}
+@media screen and (max-width:991px) {
+    .card1 {
+        width: 130%;
+        margin-left: -50%;
+        height: 96%;
+    }
+
+    .card2 {
+        width: 115%;
+        height: 95%;
+    }
+
+    img.imgchangepersonal {
+        margin-top: 10%;
+    }
+
+    img.imgsavepersonal {
+        margin-top: 18%;
+    }
+}
+@media screen and (max-width:850px) {
+    .card1 {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .card2 {
+        width: 100%;
+        height: 95%;
+    }
+}
+@media screen and (max-width:769px) {
+    .card1 {
+        width: 100%;
+        margin-left: 2px;
+    }
+
+    .card2 {
+        width: 100%;
+        height: 95%;
+    }
+
+    img.imgchangepersonal {
+        margin-top: 12%;
+    }
+
+    img.imgsavepersonal {
+        margin-top: 24%;
+    }
+}
+@media screen and (max-width:768px) {
+    .card1 {
+        width: 100% !important;
+        margin-left: 2px !important;
+    }
+
+    .card2 {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width:640px) {
+    .card1 {
+        width: 120%;
+        margin-left: -20%;
+    }
+
+    .card2 {
+        width: 100%;
+    }
+
+    img.imgchangepersonal {
+        margin-top: 15%;
+    }
+
+    img.imgsavepersonal {
+        margin-top: 26%;
+    }
+}
+@media screen and (max-width:580px) {
+    .card1 {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    a.changeimage {
+        font-size: 1.1vw;
+    }
+
+    a.profilelink {
+        font-size: 1.4vw;
+    }
+
+    p.hello {
+        font-size: 2.3vw;
+    }
+
+    p.profilenameID {
+        font-size: 2.3vw;
+    }
+
+    p.profilepersonal {
+        font-size: 1.9vw;
+    }
+
+    p.profileNoOrder {
+        font-size: 1.9vw;
+    }
+
+    p.profileOrderdetail {
+        font-size: 1.9vw;
+    }
+
+    a.profilechangepersonal {
+        font-size: 1.3vw;
+    }
+
+    p.profilepersonaldetail {
+        font-size: 1.7vw;
+    }
+
+    p.profilepersonaldata {
+        font-size: 1.7vw;
+    }
+
+    a.profilechangepassword {
+        font-size: 1.3vw;
+    }
+
+    input.inputchangepersonal {
+        width: 60% !important;
+    }
+}
+@media screen and (max-width:500px) {
+    p.orderlistdetail1, p.orderlistdetail2, p.orderlistdetail3 {
+        font-size: 1.7vw;
+    }
+}
+@media screen and (max-width:480px) {
+    .card1 {
+        width: 120%;
+    }
+}
+@media screen and (max-width:383px) {
+    .card1 {
+        height: 70vh;
+    }
+}
+@media screen and (max-width:350px) {
+    .card1 {
+        width: 170%;
+    }
+
+    .card2 {
+        width: 100%;
+    }
+
+    a.changeimage {
+        font-size: 1.4vw;
+    }
+
+    a.profilelink {
+        font-size: 1.6vw;
+    }
+
+    p.hello {
+        font-size: 2.5vw;
+    }
+
+    p.profilenameID {
+        font-size: 2.5vw;
+    }
+
+    p.profilepersonal {
+        font-size: 2.1vw;
+    }
+
+    p.profileNoOrder {
+        font-size: 2vw;
+        margin-left: -10%;
+    }
+
+    p.profileOrderdetail {
+        font-size: 2.1vw;
+    }
+
+    a.profilechangepersonal {
+        font-size: 1.5vw;
+    }
+
+    p.profilepersonaldetail {
+        font-size: 1.9vw;
+    }
+
+    p.profilepersonaldata {
+        font-size: 1.9vw;
+    }
+
+    a.profilechangepassword {
+        font-size: 1.5vw;
+    }
+
+    p.orderlistdetail2 {
+        margin-left: 17%;
+    }
+}
+@media screen and (max-width:380px) {
+    img.imgpersonal {
+        width: 120%;
+        margin-left: -10%;
+    }
+
+    a.profilelink {
+        font-size: 1.1vw;
+    }
+}
+@media screen and (max-width:300px) {
+    .card1 {
+        width: 190%;
+    }
+
+    .card2 {
+        width: 100%;
+    }
+
+    a.changeimage {
+        font-size: 1.7vw;
+    }
+
+    a.profilelink {
+        font-size: 1.9vw;
+    }
+
+    p.hello {
+        font-size: 2.8vw;
+    }
+
+    p.profilenameID {
+        font-size: 2.8vw;
+    }
+
+    p.profilepersonal {
+        font-size: 2.4vw;
+    }
+
+    p.profileNoOrder {
+        font-size: 2.4vw;
+    }
+
+    p.profileOrderdetail {
+        font-size: 2.4vw;
+    }
+
+    a.profilechangepersonal {
+        font-size: 1.8vw;
+    }
+
+    p.profilepersonaldetail {
+        font-size: 2.2vw;
+    }
+
+    p.profilepersonaldata {
+        font-size: 2.2vw;
+    }
+
+    a.profilechangepassword {
+        font-size: 1.8vw;
+    }
+
+    input.changeaddress {
+        width: 55%;
+    }
+}
+@media screen and (max-width:288px) {
+    .card1 {
+        width: 230%;
+        margin-left: 0%;
+    }
+
+    a.changeimage {
+        font-size: 0.9vw;
+    }
+
+    a.profilelink {
+        font-size: 1.2vw;
+    }
+
+    p.hello {
+        font-size: 2.1vw;
+    }
+
+    p.profilenameID {
+        font-size: 2.1vw;
+    }
+
+    p.profilepersonal {
+        font-size: 1.7vw;
+    }
+
+    p.profileNoOrder {
+        font-size: 1.7vw;
+    }
+
+    p.profileOrderdetail {
+        font-size: 1.7vw;
+    }
+
+    a.profilechangepersonal {
+        font-size: 1.1vw;
+    }
+
+    p.profilepersonaldetail {
+        font-size: 1.5vw;
+    }
+
+    p.profilepersonaldata {
+        font-size: 1.5vw;
+    }
+
+    a.profilechangepassword {
+        font-size: 1.1vw;
+    }
+
+    input.changepassword {
+        width: 60%;
+    }
+}
+/*Orderlist*/
+th.orderth {
+    width: 1%;
+    display: table-cell;
+}
+table.ordertable {
+    height: auto;
+    display: block;
+    overflow-y: auto;
+}
+
+/*ChangePersonal*/
+input.inputchangepersonal {
+    display: inline;
+    width: 70%;
+    margin-top: -1%;
+    float: right;
+    margin-right: 15%;
+    border: 1.5px solid #4C251B;
+}
+input.changepassword {
+    display: inline;
+    width: 70%;
+    margin-top: -1%;
+    float: right;
+    border: 1.5px solid #4C251B;
+}
+input.changeaddress {
+    display: inline;
+    width: 70%;
+    margin-top: -1%;
+    float: right;
+    border: 1.5px solid #4C251B;
+}
+input.submitchangepersonal {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 30px;
+    background-color: #4C251B;
+    border: 2px solid #4C251B;
+    cursor: pointer;
+    padding-right: 10px;
+    padding-left: 10px;
+    outline: none;
+    margin-top: 7%;
+    margin-left: 35%;
+}
+input.submitchangepersonal:hover {
+        background-color: #FFFFFF;
+        color: #4C251B;
+        outline: none;
+    }
+input.submitchangeaddress {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 30px;
+    background-color: #4C251B;
+    border: 2px solid #4C251B;
+    cursor: pointer;
+    padding-right: 10px;
+    padding-left: 10px;
+    outline: none;
+    margin-top: 0%;
+    margin-left: 40%;
+}
+input.submitchangeaddress:hover {
+        background-color: #FFFFFF;
+        color: #4C251B;
+        outline: none;
+    }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.deletetable {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.intable1{
+    text-align: left;
+    padding: 8px;
+}
+.topic:nth-child(even) {
+    background-color: #f2f2f2
+}
+.file{
+    width:50%;
+    font-family:Kanit;
+}
+a.cancel {
+    
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: #F8523B;
+    color: #000000;
+    width: 20%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+    margin-left: 2%;
+}
+a.cancel:hover {
+    background-color: #F57A64;
+    text-decoration:none;
+    color:#ffffff;
+}
+.font {
+    font-family: Kanit;
+    padding-top: 50px;
+}
+.font2 {
+    font-family: Kanit;
+    font-size: 1vw;
+}
+

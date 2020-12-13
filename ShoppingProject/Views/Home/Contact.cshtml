@@ -1,17 +1,162 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<link href="~/Content/css/Contact.css" rel="stylesheet" />
+<body style="background-image:url(../lib/images/bgcontact1.png);
+      background-repeat: repeat-x;
+      background-attachment: fixed;
+      background-position: center;
+      width:100%;
+      height:100%;">
+</body>
+<script src="~/Scripts/js/navbar.js"></script>
+<link href="~/Content/css/navbar.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+<header class="main_menu home_menu topnav">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <img class="img-logo" src="~/lib/images/semilogo.png" width="30" height="30" alt="" loading="lazy">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+            <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                <div class="navbar-nav">
+                    <div class="nav-item">
+                        <a class="navss " href="/Home/Index">HOME</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="navss" href="/Home/Aboutus">ABOUT</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="navss" href="/Login/Index">SHOP</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="navss" href="/Home/Contact">CONTACT</a>
+                    </div>
+                    <div class="nav-item topnav-right">
+                        <a class="navs" href="/Login/index">ลงชื่อเข้าสู่ระบบ</a>
+                    </div>
+                </div>
+                @*<ul class="navbar-nav topnav-right">
+
+                    </ul>*@
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="card">
+        <div class="container">
+            <div style="height:100%;" class="row justify-content-center">
+                <div class="col-4">
+                    <p class="help">
+                        HELP
+                    </p>
+                    <p class="helpdetail">
+                        - ต้องการตรวจสอบประวัติการสั่งซื้อ
+                    </p>
+                    <a class="contactclick" asp-action="ประวัติการสั่งซื้อ">Click</a><br />
+                    <p class="helpdetail">
+                        - ต้องการแก้ไขตะกร้า
+                    </p>
+                    <a class="contactclick" asp-action="แก้ไขตะกร้า">Click</a><br />
+                    <p class="helpdetail">
+                        - ต้องการแก้ไขที่อยู่ในการจัดส่งสินค้า
+                    </p>
+                    <a class="contactclick" asp-action="ที่อยู่ในprofile">Click</a><br />
+                    <p class="helpdetail">
+                        - อื่นๆ
+                    </p><br />
+                    <p style="margin-left:3%;" class="contactEtc">
+                        กรุณาติดต่อที่เบอร์ +66 2456 3789 หรือ<br />
+                        ติดต่อทางอีเมลล์โดย กรอกข้อมูลทางด้านขวามือ
+                    </p>
+
+                    <p class="contactQAhead">
+                        Q&A
+                    </p>
+
+                    <p class="contactQ">
+                        Q : จัดส่งสิงค้าอย่างไร ใช้เวลาในการจัดส่งกี่วัน ?
+                    </p>
+                    <p class="contactA">
+                        A : จัดส่งสินค้าด้วยรถติดตั้งระบบห้องเย็น กรุงเทพและปริมณฑล 1-2 วัน ต่างจังหวัด 2-3 วัน
+                    </p>
+                    <p class="contactQ">
+                        Q : ต้องการซื้อในปริมาณมากๆในราคาส่งได้ไหม ?
+                    </p>
+                    <p class="contactA">
+                        A : สามารถทำได้ หากต้องหารซื้อในราคาส่ง กรุณาติดต่อเจ้าหน้าที่ผ่านช่องทางด้านขวามือ
+                    </p>
+                </div>
+
+
+
+                <div style="max-height:100%;" class="col-1">
+                    <div class="verticleline"></div>
+                </div>
+
+                <div class="col-7">
+                    <p class="contactus">
+                        CONTACT US
+                    </p>
+
+                    <p class="contactTel">
+                        Tel : +66 2456 3789
+                    </p>
+
+                    <form>
+                        <p class="contactform">
+                            Name
+                        </p>
+                        <input type="text" class="contactinput form-control" /><br /><br />
+                        <p class="contactform2">
+                            E-Mail
+                        </p>
+                        <input type="text" class="contactinput2 form-control" /><br /><br />
+                        <p class="contactform2">
+                            Tel
+                        </p>
+                        <input type="text" class="contactinput2 form-control" /><br /><br />
+                        <p class="contactform2">
+                            Description
+                        </p><br />
+                        <input type="text" class="contactDes form-control" />
+                    </form><br /><br /><br />
+                    <button type="button" class="contactbtn" data-toggle="modal" data-target="#contactmodal">Submit</button>
+                    <button style="margin-left:3%;" type="button" class="contactbtn2" onClick="window.location.reload();">Reset</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="modal fade" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <center>
+                            <img class="contactcorrect" src="~/lib/images/contactcorrect.png" /><br />
+                            <p class="contactmodal1">
+                                your request has been sent !
+                            </p>
+                            <p class="contactmodal2">
+                                We will reply asap :)
+                            </p>
+                        </center>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="contactmodalbtn" data-dismiss="modal">Close</button>
+                        <a href="/Home/Index" style="color: #FFFFFF inherit; text-decoration:none;" class="contactmodalbtn">กลับสู่หน้าหลัก</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
