@@ -1,0 +1,129 @@
+﻿@model ShoppingProject.ViewModel.ItemModel
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add Item</h2>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                Category :
+                @Html.DropDownListFor(expression: model => model.Type_Id, new SelectList(Model.TypeListItem, dataValueField: "Value", dataTextField: "Text"),
+                htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                Item Code :
+                @Html.TextBoxFor(expression: model => model.It_Code, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                Item Name :
+                @Html.TextBoxFor(expression: model => model.It_Name, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                Description :
+                @Html.TextBoxFor(expression: model => model.It_Des, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                Price :
+                @Html.TextBoxFor(expression: model => model.It_Price, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                Price :
+                @Html.TextBoxFor(expression: model => model.It_Unit, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                Image :
+                @Html.TextBoxFor(expression: model => model.It_Img, htmlAttributes: new { type = "file", @class = "form-contro" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-6">
+                <input type="button" value="Save" name="save" class="btn btn-primary" id="btnSave" />
+                &nbsp;
+                <input type="button" value="Reset" name="reset" class="btn btn-danger" />
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnSave").click(function () {
+                SaveItem();
+
+            });
+        });
+
+        function ResetItem() {
+            $("#Type_Id").val("1");
+            $("#It_Code").val("");
+            $("#It_Name").val("");
+            $("#It_Des").val("");
+            $("#It_Price").val("");
+            $("#It_Unit").val("");
+            $("#It_Img").val("");
+        }
+
+        function SaveItem() {
+            var formData = new FormData();
+            formData.append("Type_Id", $("#Type_Id").val());
+            formData.append("It_Code", $("#It_Code").val());
+            formData.append("It_Name", $("#It_Name").val());
+            formData.append("It_Des", $("#It_Des").val());
+            formData.append("It_Price", $("#It_Price").val());
+            formData.append("#It_Unit", $("##It_Unit").val());
+            formData.append("It_Img", $("#It_Img").get(0).files[0]);
+
+
+            $.ajax({
+                async: true,
+                dataType: 'JSON',
+                type: 'POST',
+                contentType: false,
+                processData: false,
+                url: '/Admin/Add',
+                data: formData,
+                success: function (data) {
+                    if (data.Success) {
+
+                        alert(data.Message);
+                        ResetItem();
+                    }
+                },
+                error: function () {
+                    alert("fixe");
+                }
+
+            });
+        }
+
+    </script>
+

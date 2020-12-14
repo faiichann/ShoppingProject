@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@if (Session["UserID"] != null)
+{
+
+    <h2>Hello : @Session["UserName"]</h2>
+    <hr />
+    <div class="container">
+        <a class="btn btn-primary" href="/Admin/Add">add new item</a><br /><br />
+
+    </div>
+}

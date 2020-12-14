@@ -15,5 +15,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tbTypes">
+      <EntityTypeMapping TypeName="ShopDBModel.tbType">
+        <MappingFragment StoreEntitySet="tbType">
+          <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+          <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbItems">
+      <EntityTypeMapping TypeName="ShopDBModel.tbItem">
+        <MappingFragment StoreEntitySet="tbItem">
+          <ScalarProperty Name="It_Delete" ColumnName="It_Delete" />
+          <ScalarProperty Name="It_Unit" ColumnName="It_Unit" />
+          <ScalarProperty Name="It_Img" ColumnName="It_Img" />
+          <ScalarProperty Name="It_Price" ColumnName="It_Price" />
+          <ScalarProperty Name="It_Des" ColumnName="It_Des" />
+          <ScalarProperty Name="It_Name" ColumnName="It_Name" />
+          <ScalarProperty Name="It_Code" ColumnName="It_Code" />
+          <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
+          <ScalarProperty Name="It_Id" ColumnName="It_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

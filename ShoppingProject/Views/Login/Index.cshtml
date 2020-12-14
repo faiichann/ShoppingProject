@@ -26,7 +26,7 @@
                 <div class="col-12">
                     <form class="input-grouplogin" id="loginForm">
                         <div id="msg"><ul style="color:red;">Invalid Username Or Password</ul></div>
-                        <input class="input-field" type="text" name="U_Name" id="username" placeholder="UserName" />
+                        <input class="input-field" type="text" name="U_Name" id="usernamelog" placeholder="UserName" />
                         <input name="U_Password" id="pass" style="margin-top:5%;" type="password" class="input-field" placeholder="Password" />
                         <a style="margin-top:15%;text-align:center;text-decoration:none; border:0; outline:none; color:inherit" class="submit-btn" onclick="Login()">Login</a>
                     </form>
@@ -116,6 +116,7 @@
     $("#msg").hide();
     function Login() {
         var data = $("#loginForm").serialize();
+        var name = $("#usernamelog").val();
         $.ajax({
             type: "post",
             url: "/Login/CheckValidUser",
@@ -126,7 +127,13 @@
                     $("#msg").show();
                 }
                 else {
-                    window.location.href = "/Login/Home";
+                    if ( name == "admin") {
+                        window.location.href = "/Admin/Index";
+                    }
+                    else {
+                        window.location.href = "/Login/Home";
+                    }
+                    
                     $("#msg").hide();
                 }
             }

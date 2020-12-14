@@ -5,6 +5,27 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ShopDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbItem">
+          <Key>
+            <PropertyRef Name="It_Id" />
+          </Key>
+          <Property Name="It_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Type_Id" Type="int" />
+          <Property Name="It_Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="It_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="It_Des" Type="nvarchar" MaxLength="50" />
+          <Property Name="It_Price" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="It_Img" Type="nvarchar(max)" />
+          <Property Name="It_Unit" Type="int" />
+          <Property Name="It_Delete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbType">
+          <Key>
+            <PropertyRef Name="Type_Id" />
+          </Key>
+          <Property Name="Type_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type_Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="tbUser">
           <Key>
             <PropertyRef Name="U_Id" />
@@ -19,6 +40,8 @@
           <Property Name="U_Fname" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="ShopDBModelStoreContainer">
+          <EntitySet Name="tbItem" EntityType="Self.tbItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbType" EntityType="Self.tbType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbUser" EntityType="Self.tbUser" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -27,6 +50,8 @@
       <Schema Namespace="ShopDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="ShopDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbUsers" EntityType="ShopDBModel.tbUser" />
+          <EntitySet Name="tbTypes" EntityType="ShopDBModel.tbType" />
+          <EntitySet Name="tbItems" EntityType="ShopDBModel.tbItem" />
         </EntityContainer>
         <EntityType Name="tbUser">
           <Key>
@@ -40,6 +65,27 @@
           <Property Name="U_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="U_Isvalid" Type="Boolean" />
           <Property Name="U_Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbType">
+          <Key>
+            <PropertyRef Name="Type_Id" />
+          </Key>
+          <Property Name="Type_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbItem">
+          <Key>
+            <PropertyRef Name="It_Id" />
+          </Key>
+          <Property Name="It_Id" Type="Guid" Nullable="false" />
+          <Property Name="Type_Id" Type="Int32" />
+          <Property Name="It_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="It_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="It_Des" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="It_Price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="It_Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="It_Unit" Type="Int32" />
+          <Property Name="It_Delete" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -58,6 +104,29 @@
                 <ScalarProperty Name="U_Email" ColumnName="U_Email" />
                 <ScalarProperty Name="U_Name" ColumnName="U_Name" />
                 <ScalarProperty Name="U_Id" ColumnName="U_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbTypes">
+            <EntityTypeMapping TypeName="ShopDBModel.tbType">
+              <MappingFragment StoreEntitySet="tbType">
+                <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+                <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbItems">
+            <EntityTypeMapping TypeName="ShopDBModel.tbItem">
+              <MappingFragment StoreEntitySet="tbItem">
+                <ScalarProperty Name="It_Delete" ColumnName="It_Delete" />
+                <ScalarProperty Name="It_Unit" ColumnName="It_Unit" />
+                <ScalarProperty Name="It_Img" ColumnName="It_Img" />
+                <ScalarProperty Name="It_Price" ColumnName="It_Price" />
+                <ScalarProperty Name="It_Des" ColumnName="It_Des" />
+                <ScalarProperty Name="It_Name" ColumnName="It_Name" />
+                <ScalarProperty Name="It_Code" ColumnName="It_Code" />
+                <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
+                <ScalarProperty Name="It_Id" ColumnName="It_Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

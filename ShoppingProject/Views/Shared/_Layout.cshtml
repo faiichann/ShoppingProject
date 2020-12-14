@@ -7,6 +7,10 @@
     @Styles.Render("~/lib/bootstrap/dist/css/bootstrap.min.css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="~/Scripts/js/navbar.js"></script>
+    <link href="~/Content/css/navbar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
 
 </head>
 <body>
@@ -29,6 +33,32 @@
                 </div>
             </div>
         </div>*@
+    <header class="main_menu home_menu topnav">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <img class="img-logo" src="~/lib/images/semilogo.png" width="30" height="30" alt="" loading="lazy">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                    <div class="navbar-nav">
+                        <div class="nav-item">
+                            <a class="navss " href="/Home/Index">HOME</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="navss" href="/Home/Aboutus">ABOUT</a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="navss" href="/Home/Contact">CONTACT</a>
+                        </div>
+                        @Html.Partial("Login")
+                       
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
@@ -39,6 +69,8 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 </body>
+
+</html>
 @*<script type="text/javascript">
     $(window).scroll(function () {
         var window_top = $(window).scrollTop() + 1;
@@ -49,9 +81,9 @@
         }
     });
 
-    //$('.counter').counterUp({
-    //    time: 2000
-    //});
+    $('.counter').counterUp({
+        time: 2000
+    });
 
     $('.slider').slick({
         slidesToShow: 1,
@@ -83,4 +115,3 @@
     });*@
 
 </script>
-</html>
