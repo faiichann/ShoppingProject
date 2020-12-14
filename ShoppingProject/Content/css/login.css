@@ -112,7 +112,8 @@
     height: 430px;
     position: relative;
     margin: 6% auto;
-    background-color: #FFFFFF
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 15px 6px rgba(0,0,0,0.1)
 }
 
 .form-box-regis {
