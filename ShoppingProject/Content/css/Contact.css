@@ -12,428 +12,518 @@ button, a  {
     border-radius:20px;
 }
 
-@media screen and (max-width:991px) {
-    a.contactclick {
-        margin-top:6%!important;
-    }
+@media screen and (max-width:1260px) {
     .card {
-        margin-left:0%!important;
-        margin-top:15%;
+        height:75vh;
+        margin-top:4.5%;
     }
 }
 
-@media screen and (max-width:768px) {
-    .card {
-        width:100%;
-        margin-left:0%!important;
-        margin-top:20%;
-    }
-    a.contactclick {
-        margin-top: 9.5% !important;
+@media screen and (max-width:1100px) {
+    .contactmodalbtn1 {
+        margin-left:34%!important;
     }
 }
 
-@media screen and (max-width:700px) {
-    .card {
-        width: 100%;
-        margin-left:0;
-    }
-}
+    @media screen and (max-width:991px) {
+        a.contactclick {
+            margin-top: 6% !important;
+        }
 
-@media screen and (max-width:600px) {
-    p.help, p.helpdetail, a.contactclick, p.contactEtc, p.contactQAhead, p.contactQ, p.contactA, .verticleline {
-        opacity:0;
-        font-size:0vw;
+        .card {
+            margin-left: 0% !important;
+            margin-top: 15%;
+        }
     }
-    .card {
-        width:80%;
-        margin-left:12%!important;
+
+    @media screen and (max-width:768px) {
+        .card {
+            width: 100%;
+            margin-left: 0% !important;
+            margin-top: 20%;
+        }
+
+        a.contactclick {
+            margin-top: 9.5% !important;
+        }
+
+        .contactmodalbtn1 {
+            margin-left: 37% !important;
+        }
+    }
+
+    @media screen and (max-width:700px) {
+        .card {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        p.help, p.helpdetail, a.contactclick, p.contactEtc, p.contactQAhead, p.contactQ, p.contactA, .verticleline {
+            opacity: 0;
+            font-size: 0vw;
+        }
+
+        .card {
+            width: 80%;
+            margin-left: 12% !important;
+        }
+
+        p.helpdetail {
+            display: none !important;
+        }
+
+        p.contactus {
+            font-size: 2.5vw !important;
+            margin-left: -5% !important;
+        }
+
+        p.contactTel {
+            font-size: 1.9vw !important;
+            margin-left: -65% !important;
+        }
+
+        p.contactform {
+            font-size: 1.8vw !important;
+            margin-left: -60% !important;
+            display: block !important;
+        }
+
+        p.contactform2 {
+            font-size: 1.8vw !important;
+            margin-left: -60% !important;
+            display: block !important;
+            margin-top: -10%;
+        }
+
+        input.contactinput {
+            margin-left: -35% !important;
+            display: block;
+            float: none !important;
+            width: 100% !important;
+        }
+
+        input.contactinput2 {
+            margin-left: -35% !important;
+            display: block;
+            float: none !important;
+            width: 100% !important;
+            margin-top: -10%;
+        }
+
+        input.contactDes {
+            margin-left: -60% !important;
+            display: block;
+            float: none !important;
+            width: 130% !important;
+            height: 60px;
+            margin-top: -10%;
+        }
+
+        button.contactbtn {
+            margin-top: -15% !important;
+            position: absolute;
+            margin-left: -15% !important;
+        }
+
+        button.contactbtn2 {
+            margin-top: -15% !important;
+            position: absolute;
+            margin-left: 15% !important;
+        }
+    }
+
+    @media screen and (max-width:580px) {
+        .modal-content {
+            width: 70%;
+            margin-left: 17%;
+        }
+
+        .contactmodalbtn1 {
+            margin-left: 26% !important;
+        }
+
+        p.contactmodal1 {
+            font-size: 2.8vw !important;
+        }
+
+        p.contactmodal2 {
+            font-size: 2.5vw !important;
+        }
+
+        .contactmodalbtn1 {
+            font-size: 2vw !important;
+        }
+
+        .contactmodalbtn2 {
+            font-size: 2vw !important;
+        }
+    }
+
+    @media screen and (max-width:483px) {
+        .card {
+            width: 100%;
+            margin-left: 0 !important;
+        }
+    }
+
+    @media screen and (max-width:420px) {
+        .contactmodalbtn1 {
+            margin-left: 23% !important;
+        }
+    }
+
+    @media screen and (max-width:400px) {
+        button.contactbtn {
+            margin-top: -20% !important;
+            position: absolute;
+            margin-left: -23% !important;
+        }
+
+        button.contactbtn2 {
+            margin-top: -20% !important;
+            position: absolute;
+            margin-left: 12% !important;
+        }
+    }
+
+    @media screen and (max-width:353px) {
+        .card {
+            width: 100%;
+            margin-left: 0% !important;
+        }
+
+        p.contactus {
+            font-size: 3vw !important;
+        }
+
+        p.contactTel, p.contactform, p.contactform2, p.contactDes {
+            font-size: 2.5vw !important;
+        }
+    }
+
+    @media screen and (max-width:320px) {
+        .contactmodalbtn1 {
+            margin-left: 10% !important;
+        }
+
+        p.contactmodal1 {
+            font-size: 3.8vw !important;
+        }
+        p.contactmodal2 {
+            font-size: 3.5vw !important;
+        }
+        .contactmodalbtn1 {
+            font-size: 3vw !important;
+        }
+        .contactmodalbtn2 {
+            font-size: 3vw !important;
+        }
+    }
+
+    @media screen and (max-width:288px) {
+        p.contactus {
+            margin-top: -285% !important;
+            margin-left: 28% !important;
+        }
+
+        p.contactform {
+            margin-left: -40% !important;
+        }
+
+        p.contactTel {
+            margin-left: -30% !important;
+        }
+
+        p.contactform2 {
+            margin-left: -40% !important;
+        }
+
+        input.contactinput {
+            margin-left: -7% !important;
+        }
+
+        input.contactinput2 {
+            margin-left: -7% !important;
+        }
+
+        input.contactDes {
+            margin-left: -7% !important;
+        }
+        .contactmodalbtn1 {
+            margin-left: 6% !important;
+        }
+    }
+
+    .col-4 {
+        max-width: 30%;
+    }
+
+    p.help {
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2vw;
+        line-height: 54px;
+        text-align: center;
+        color: #435E39;
+        margin-top: 15%
     }
 
     p.helpdetail {
-        display:none!important;
+        display: contents;
+        float: left;
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.9vw;
+        line-height: 100%;
+        color: #000000;
+        margin-left: 5%;
     }
 
-    p.contactus {
-        font-size:2.5vw!important;
-        margin-left:-5%!important;
-    }
-
-    p.contactTel {
-        font-size: 1.9vw !important;
-        margin-left: -65% !important;
-    }
-    p.contactform  {
-        font-size:1.8vw!important;
-        margin-left:-60%!important;
-        display:block !important;
-    }
-    p.contactform2 {
-        font-size: 1.8vw !important;
-        margin-left: -60% !important;
-        display: block !important;
-        margin-top:-10%;
-    }
-    input.contactinput {
-        margin-left: -35% !important;
+    a.contactclick {
         display: block;
-        float: none !important;
-        width: 100% !important;
-    }
-    input.contactinput2 {
-        margin-left: -35% !important;
-        display: block;
-        float: none !important;
-        width: 100% !important;
-        margin-top:-10%;
-    }
-    input.contactDes {
-        margin-left: -60% !important;
-        display: block;
-        float: none !important;
-        width: 130% !important;
-        height:60px;
-        margin-top: -10%;
+        float: right;
+        color: #C36643;
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.9vw;
+        line-height: 100%;
+        margin-top: 2.5%;
+        text-decoration: none;
     }
 
-    button.contactbtn {
-        margin-top: -15% !important;
-        position: absolute;
-        margin-left:-15%!important;
-    }
-    button.contactbtn2 {
-        margin-top: -15% !important;
-        position: absolute;
-        margin-left:15%!important;
-    }
+        a.contactclick:hover {
+            color: #C36643;
+        }
 
-}
-
-@media screen and (max-width:483px) {
-    .card {
-        width:100%;
-        margin-left:0!important;
-    }
-}
-
-@media screen and (max-width:400px) {
-    button.contactbtn {
-        margin-top: -20% !important;
-        position: absolute;
-        margin-left: -23% !important;
-    }
-
-    button.contactbtn2 {
-        margin-top: -20% !important;
-        position: absolute;
-        margin-left: 12% !important;
-    }
-}
-
-@media screen and (max-width:353px) {
-    .card {
-        width: 100%;
-        margin-left: 0% !important;
-    }
-    p.contactus {
-        font-size:3vw!important;
-    }
-    p.contactTel, p.contactform, p.contactform2, p.contactDes{
-        font-size:2.5vw!important;
-    }
-}
-
-@media screen and (max-width:288px) {
-    p.contactus {
-        margin-top: -285% !important;
-        margin-left: 28% !important;
-    }
-    p.contactform {
-        margin-left:-40%!important;
-    }
-    p.contactTel {
-        margin-left:-30%!important;
-    }
-    p.contactform2 {
-        margin-left: -40% !important;
-    }
-    input.contactinput {
-        margin-left:-7%!important;
-    }
-    input.contactinput2 {
-        margin-left: -7% !important;
-    }
-    input.contactDes {
-        margin-left: -7% !important;
-    }
-}
-
-.col-4 {
-    max-width:30%;
-}
-
-p.help {
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2vw;
-    line-height: 54px;
-    text-align:center;
-    color: #435E39;
-    margin-top:15%
-}
-
-p.helpdetail {
-    display:contents;
-    float:left;
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.9vw;
-    line-height: 100%;
-    color: #000000;
-    margin-left:5%;
-}
-
-a.contactclick {
-    display:block;
-    float:right;
-    color: #C36643;
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.9vw;
-    line-height: 100%;
-    margin-top:2.5%;
-    text-decoration:none;
-}
-    a.contactclick:hover {
+    p.contactEtc {
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.8vw;
+        line-height: 140%;
         color: #C36643;
     }
 
-p.contactEtc {
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.8vw;
-    line-height: 140%;
-    color: #C36643;
-}
+    p.contactQAhead {
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2vw;
+        line-height: 54px;
+        text-align: center;
+        color: #435E39;
+    }
 
-p.contactQAhead {
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2vw;
-    line-height: 54px;
-    text-align: center;
-    color: #435E39;
-}
+    p.contactQ {
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.8vw;
+        line-height: 0%;
+        color: #435E39;
+    }
 
-p.contactQ {
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.8vw;
-    line-height: 0%;
-    color: #435E39;
-}
+    p.contactA {
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.8vw;
+        line-height: 130%;
+        color: #C36643;
+    }
 
-p.contactA {
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.8vw;
-    line-height: 130%;
-    color: #C36643;
-}
+    .verticleline {
+        position: absolute;
+        border-left: 3px solid #435E39;
+        height: 400px;
+        margin-top: 50%;
+    }
 
-.verticleline {
-    position:absolute;
-    border-left: 3px solid #435E39;
-    height:400px;
-    margin-top:50%;
-}
+    p.contactus {
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2vw;
+        line-height: 54px;
+        color: #435E39;
+        margin-left: 30%;
+        margin-top: 8%
+    }
 
-p.contactus {
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2vw;
-    line-height: 54px;
-    color: #435E39;
-    margin-left: 30%;
-    margin-top: 8%
-}
+    p.contactTel {
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.2vw;
+        line-height: 36px;
+        color: #435E39;
+        margin-left: -6%;
+        margin-top: -2%;
+    }
 
-p.contactTel {
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.2vw;
-    line-height: 36px;
-    color: #435E39;
-    margin-left:-6%;
-    margin-top:-2%;
-}
+    p.contactform {
+        display: contents;
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1vw;
+        line-height: 200%;
+        color: #435E39;
+        float: left;
+    }
 
-p.contactform {
-    display:contents;
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1vw;
-    line-height: 200%;
-    color: #435E39;
-    float:left;
-}
+    p.contactform2 {
+        display: contents;
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1vw;
+        line-height: 200%;
+        color: #435E39;
+        float: left;
+    }
 
-p.contactform2 {
-    display: contents;
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1vw;
-    line-height: 200%;
-    color: #435E39;
-    float: left;
-}
+    input.contactinput {
+        border-radius: 17px;
+        float: right;
+        width: 87%;
+        font-size: 1vw;
+    }
 
-input.contactinput {
-    border-radius: 17px;
-    float: right;
-    width: 87%;
-    font-size: 1vw;
-}
-input.contactinput2 {
-    border-radius: 17px;
-    float: right;
-    width: 87%;
-    font-size: 1vw;
-}
+    input.contactinput2 {
+        border-radius: 17px;
+        float: right;
+        width: 87%;
+        font-size: 1vw;
+    }
 
-input.contactDes {
-    border-radius: 17px;
-    float: left;
-    width: 100%;
-    line-height:4em;
-    font-size:1vw;
-    padding-bottom:10%;
-    padding-top:3%;
-}
+    input.contactDes {
+        border-radius: 17px;
+        float: left;
+        width: 100%;
+        line-height: 4em;
+        font-size: 1vw;
+        padding-bottom: 10%;
+        padding-top: 3%;
+    }
 
-button.contactbtn, button.contactbtn2 {
-    padding-right: 15px;
-    padding-left: 15px;
-    border: 2px solid #435E39;
-    font-size: 0.9vw;
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 200%;
-    color: #435E39;
-    border-radius: 30px;
-    background-color: #FFFFFF;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    margin-left: 35%;
-    margin-top: 1.5%;
-}
-button.contactbtn:hover {
-    background-color:#435E39;
-    color:#FFFFFF;
-}
-button.contactbtn2:hover {
-    background-color:#435E39;
-    color:#FFFFFF;
-}
+    button.contactbtn, button.contactbtn2 {
+        padding-right: 15px;
+        padding-left: 15px;
+        border: 2px solid #435E39;
+        font-size: 0.9vw;
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 200%;
+        color: #435E39;
+        border-radius: 30px;
+        background-color: #FFFFFF;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        margin-left: 35%;
+        margin-top: 1.5%;
+    }
 
-.modal-footer {
-    border-top:0;
-    display:block;
-}
+        button.contactbtn:hover {
+            background-color: #435E39;
+            color: #FFFFFF;
+        }
 
-.modal-content {
-    background-color:#435E39!important;
-    border-radius:10px;
-}
+        button.contactbtn2:hover {
+            background-color: #435E39;
+            color: #FFFFFF;
+        }
 
-.modal-body {
-    padding:0;
-}
+    .modal-footer {
+        border-top: 0;
+        display: block;
+    }
 
-img.contactcorrect {
-    width:10%;
-    margin-top:4%;
-}
+    .modal-content {
+        background-color: #435E39 !important;
+        border-radius: 10px;
+    }
 
-p.contactmodal1 {
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.5vw;
-    line-height: 200%;
-    color: #FFFFFF;
-    margin-top:1%;
-}
+    .modal-body {
+        padding: 0;
+    }
 
-p.contactmodal2 {
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1vw;
-    line-height: 200%;
-    color: #FFFFFF;
-}
+    img.contactcorrect {
+        width: 10%;
+        margin-top: 4%;
+    }
 
-.contactmodalbtn1 {
-    border: 2px solid #FFFFFF;
-    border-radius: 20px;
-    background-color: #435E39;
-    color: #FFFFFF;
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 0.9vw;
-    line-height: 200%;
-    padding-right:10px;
-    padding-left:10px;
-    outline:none;
-    cursor:pointer;
-    margin-left:32%;
-}
-.contactmodalbtn2 {
-    border: 2px solid #FFFFFF;
-    border-radius: 20px;
-    background-color: #435E39;
-    color: #FFFFFF;
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 0.9vw;
-    line-height: 200%;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 3.5px;
-    padding-bottom: 3.5px;
-    outline: none;
-    cursor: pointer;
-    margin-left: 32%;
-}
+    p.contactmodal1 {
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5vw;
+        line-height: 200%;
+        color: #FFFFFF;
+        margin-top: 1%;
+    }
 
-.contactmodalbtn1:hover {
-    background-color: #FFFFFF;
-    color: #435E39;
-    outline: none;
-}
-.contactmodalbtn2:hover {
-    background-color: #FFFFFF;
-    color: #435E39;
-    outline: none;
-}
+    p.contactmodal2 {
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1vw;
+        line-height: 200%;
+        color: #FFFFFF;
+    }
 
+    .contactmodalbtn1 {
+        border: 2px solid #FFFFFF;
+        border-radius: 20px;
+        background-color: #435E39;
+        color: #FFFFFF;
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.9vw;
+        line-height: 200%;
+        padding-right: 10px;
+        padding-left: 10px;
+        outline: none;
+        cursor: pointer;
+        margin-left: 32%;
+    }
 
-.form-contact {
+    .contactmodalbtn2 {
+        border: 2px solid #FFFFFF;
+        border-radius: 20px;
+        background-color: #435E39;
+        color: #FFFFFF;
+        font-family: Kanit;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.9vw;
+        line-height: 200%;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 3.5px;
+        padding-bottom: 3.5px;
+        outline: none;
+        cursor: pointer;
+        margin-left: 32%;
+    }
 
-}
+    .contactmodalbtn1:hover {
+        background-color: #FFFFFF;
+        color: #435E39;
+        outline: none;
+    }
+
+    .contactmodalbtn2:hover {
+        background-color: #FFFFFF;
+        color: #435E39;
+        outline: none;
+    }
+
