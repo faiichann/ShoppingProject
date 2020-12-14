@@ -1,4 +1,8 @@
 ﻿/*Contact*/
+button, a  {
+    outline:none!important;
+    text-decoration:none!important;
+}
 
 .card {
     box-shadow:1px 1px 15px 2px rgba(0,0,0,0.1);
@@ -105,6 +109,13 @@
 
 }
 
+@media screen and (max-width:483px) {
+    .card {
+        width:100%;
+        margin-left:0!important;
+    }
+}
+
 @media screen and (max-width:400px) {
     button.contactbtn {
         margin-top: -20% !important;
@@ -194,7 +205,11 @@ a.contactclick {
     font-size: 0.9vw;
     line-height: 100%;
     margin-top:2.5%;
+    text-decoration:none;
 }
+    a.contactclick:hover {
+        color: #C36643;
+    }
 
 p.contactEtc {
     font-family: Kanit;
@@ -340,7 +355,7 @@ button.contactbtn2:hover {
 }
 
 .modal-content {
-    background-color:#435E39;
+    background-color:#435E39!important;
     border-radius:10px;
 }
 
@@ -372,7 +387,7 @@ p.contactmodal2 {
     color: #FFFFFF;
 }
 
-.contactmodalbtn {
+.contactmodalbtn1 {
     border: 2px solid #FFFFFF;
     border-radius: 20px;
     background-color: #435E39;
@@ -388,12 +403,36 @@ p.contactmodal2 {
     cursor:pointer;
     margin-left:32%;
 }
-
-.contactmodalbtn:hover {
-    background-color:#FFFFFF;
-    color:#435E39;
-    outline:none;
+.contactmodalbtn2 {
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    background-color: #435E39;
+    color: #FFFFFF;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9vw;
+    line-height: 200%;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 3.5px;
+    padding-bottom: 3.5px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 32%;
 }
+
+.contactmodalbtn1:hover {
+    background-color: #FFFFFF;
+    color: #435E39;
+    outline: none;
+}
+.contactmodalbtn2:hover {
+    background-color: #FFFFFF;
+    color: #435E39;
+    outline: none;
+}
+
 
 .form-contact {
 
