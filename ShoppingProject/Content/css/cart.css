@@ -1,4 +1,7 @@
-﻿th.orderth {
+﻿button,a {
+    outline: none !important;
+}
+th.orderth {
     font-family: Kanit;
     width: 1%;
     display: table-cell;
@@ -28,9 +31,13 @@ table.ordertable {
 input.numproduct{
     width:60%;
 }
-.topfont{
-    font-family:Kanit;
-    margin-top:10%;
+.topfont {
+    font-family: Kanit;
+    margin-top: 4%;
+    margin-left: 0%;
+    margin-bottom: 3%;
+    width: 100%;
+    font-size: 25px;
 }
 a.trash:hover {
     cursor: pointer;
@@ -43,4 +50,121 @@ a.trash:hover {
 }
 .colorfont {
     color: #435E39;
+}
+.con {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: #00E241;
+    color: #000000;
+    width: 10%;
+    height: 10%;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+    margin-left: 33%;
+    margin-top: 2%;
+}
+a.cancel {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: #F8523B;
+    color: #000000;
+    width: 10%;
+    height:10%;
+    text-align:center;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+    margin-left: 2%;
+    margin-top:2%;
+}
+.con:hover {
+    background-color: #79FA6E;
+}
+a.cancel:hover {
+    background-color: #F57A64;
+}
+.fontcon {
+    font-family: Kanit;
+    padding-top: 12px;
+}
+
+@media screen and (max-width:990px) {
+    .con {
+        width: 15%;
+    }
+
+    a.cancel {
+        width: 15%;
+        height: 0%;
+    }
+}
+@media screen and (max-width:750px){
+    a.cancel {
+        padding-top: 2%;
+        text-align: center;
+        margin-top: 5%;
+    }
+    .con {
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width:580px){
+    a.cancel{
+        font-size:16px;
+    }
+    .intable1,th.ordertable{
+        font-size:13px;
+    }
+    .topfont{
+        font-size:18px;
+    }
+    .cardcart {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width:430px){
+    a.cancel {
+        font-size: 14px;
+        padding-top: 2.5%;
+        width: 20%;
+    }
+    .con {
+        font-size: 14px;
+        width: 20%;
+        margin-left: 30%;
+    }
+}
+@media screen and (max-width:350px){
+    a.cancel{
+        font-size:11px;
+    }
+    .con{
+        font-size:11px;
+    }
+    .intable1, th.ordertable {
+        font-size: 11px;
+    }
+
+    .topfont {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:280px) {
+    a.cancel {
+        padding-top: 4%;
+        text-align: center;
+    }
+
+    .con {
+        font-size: 11px;
+    }
 }

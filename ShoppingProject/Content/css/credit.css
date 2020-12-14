@@ -1,6 +1,7 @@
 ﻿.font{
     font-family:Kanit;
     padding-top:50px;
+
 }
 .font2{
     font-family: Kanit;
@@ -229,7 +230,7 @@ a.cancel:hover{
     border-radius:5px;
     font-family:Kanit;
 }
- .modal-footer{
+.modal-footer{
     border-top:0;
     display:block;
 }
