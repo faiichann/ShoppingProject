@@ -3,13 +3,13 @@
 }
 .aboutbg1 {
     position: absolute;
-    margin-left:-14%;
+    margin-left:0%;
 }
 
 .aboutbg2 {
     position: absolute;
-    margin-left: 78.5%;
-    margin-top: -4%;
+    margin-left: 91.5%;
+    margin-top:5%;
 }
 
 p.about-header {
@@ -135,12 +135,24 @@ img.aboutimgicon {
 }
 
 
+@media screen and (max-width:1250px) {
+    .aboutbg2 {
+        margin-left:88.5%;
+    }
+}
+
+@media screen and (max-width:1020px) {
+    .aboutbg2 {
+        margin-left:86.5%;
+    }
+}
+
 @media screen and (max-width:991px) {
     .aboutbg1 {
-        margin-left:-18%;
+        margin-left:-4%;
     }
     .aboutbg2 {
-        margin-left:72.5%;
+        margin-left:86%;
     }
 }
 
@@ -151,24 +163,34 @@ img.aboutimgicon {
     }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:921px) {
     .aboutbg2 {
-        margin-left:74.5%;
+        margin-left:84.5%;
     }
 }
 
+
 @media screen and (max-width:800px) {
-    .aboutbg2 {
-        margin-left:76.5%;
-    }
     .card {
         margin-left:-18%;
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:795px) {
     .aboutbg2 {
-        margin-left:66.5%;
+        margin-left:83.5%;
+    }
+}
+
+@media screen and (max-width:755px) {
+    .aboutbg2 {
+        margin-left:82%;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .aboutbg2 {
+        margin-left: 80%;
     }
 }
 
@@ -177,18 +199,18 @@ img.aboutimgicon {
         margin-left:-27%;
         width:110%;
     }
-    
+}
+
+@media screen and (max-width:650px) {
     .aboutbg2 {
-        margin-left:68.5%;
+        margin-left: 78.5%;
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:605px) {
+
     .aboutbg2 {
-        margin-left:72.5%;
-    }
-    .aboutbg1 {
-        margin-left:-23%;
+        margin-left:77%;
     }
 
     .grid-container-aboutus {
@@ -221,9 +243,15 @@ img.aboutimgicon {
     }
 }
 
+@media screen and (max-width:580px) {
+    .aboutbg1,.aboutbg2 {
+        display:none;
+    }
+}
+
 @media screen and (max-width:500px) {
     .about-img-ourteam {
-        width:110%;
+        width:100%;
     }
 }
 
@@ -241,13 +269,6 @@ img.aboutimgicon {
     .card {
         width:130%;
         margin-left:-42%;
-    }
-    .aboutbg1 {
-        margin-left: -30%;
-        margin-top: -20%;
-    }
-    .aboutbg2 {
-        margin-left:64%;
     }
     .grid-container-aboutus {
         grid-gap: 30px 20px;
@@ -286,10 +307,6 @@ img.aboutimgicon {
 }
 
 @media screen and (max-width:300px) {
-
-    .aboutbg1, .aboutbg2 {
-        display:none;
-    }
 
     .grid-container-aboutus {
         grid-template-columns :repeat(1,auto);
