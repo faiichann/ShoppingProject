@@ -142,6 +142,7 @@
     <Content Include="Content\css\Home.css" />
     <Content Include="Content\css\login.css" />
     <Content Include="Content\css\navbar.css" />
+    <Content Include="Content\css\navbarlogin.css" />
     <Content Include="Content\css\products.css" />
     <Content Include="Content\css\profileuser.css" />
     <Content Include="Content\css\register.css" />
