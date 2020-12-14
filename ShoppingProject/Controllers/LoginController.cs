@@ -49,39 +49,6 @@ namespace ShoppingProject.Controllers
             Session.Abandon();
             return RedirectToAction("Index");
         }
-        public ActionResult Home()
-        {
-            if (Session["UserID"] != null)
-            {
-                return View();
-            }
-            else
-            {
-                return RedirectToAction("Index");
-            }
-        }
-        public ActionResult Contact()
-        {
-            if (Session["UserID"] != null)
-            {
-                return View();
-            }
-            else
-            {
-                return RedirectToAction("Index");
-            }
-        }
-        public ActionResult Aboutus()
-        {
-            if (Session["UserID"] != null)
-            {
-                return View();
-            }
-            else
-            {
-                return RedirectToAction("Index");
-            }
-        }
         public ActionResult Profile()
         {
             if (Session["UserID"] != null)

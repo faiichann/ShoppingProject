@@ -2,77 +2,78 @@
 @{
     ViewBag.Title = "Add";
 }
-
+<script src="~/Scripts/jquery-3.5.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 <h2>Add Item</h2>
 <hr />
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                Category :
-                @Html.DropDownListFor(expression: model => model.Type_Id, new SelectList(Model.TypeListItem, dataValueField: "Value", dataTextField: "Text"),
-                htmlAttributes: new { @class = "form-control" })
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                Item Code :
-                @Html.TextBoxFor(expression: model => model.It_Code, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                Item Name :
-                @Html.TextBoxFor(expression: model => model.It_Name, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                Description :
-                @Html.TextBoxFor(expression: model => model.It_Des, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                Price :
-                @Html.TextBoxFor(expression: model => model.It_Price, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                Price :
-                @Html.TextBoxFor(expression: model => model.It_Unit, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                Image :
-                @Html.TextBoxFor(expression: model => model.It_Img, htmlAttributes: new { type = "file", @class = "form-contro" })
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="form-group">
+
+    <div class="container">
+        <div class="row">
             <div class="col-md-6">
-                <input type="button" value="Save" name="save" class="btn btn-primary" id="btnSave" />
-                &nbsp;
-                <input type="button" value="Reset" name="reset" class="btn btn-danger" />
+                <div class="form-group">
+                    Category :
+                    @Html.DropDownListFor(model => model.Type_Id, new SelectList(Model.TypeListItem, dataValueField: "Value", dataTextField: "Text"),
+        htmlAttributes: new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    Item Code :
+                    @Html.TextBoxFor(expression: model => model.It_Code, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    Item Name :
+                    @Html.TextBoxFor(expression: model => model.It_Name, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    Description :
+                    @Html.TextBoxFor(expression: model => model.It_Des, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    Price :
+                    @Html.TextBoxFor(expression: model => model.It_Price, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    Unit:
+                    @Html.TextBoxFor(expression: model => model.It_Unit, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    Image :
+                    @Html.TextBoxFor(expression: model => model.It_Img, htmlAttributes: new { type = "file", @class = "form-contro" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-6">
+                    <input type="button" value="Save" name="save" class="btn btn-primary" id="btnSave" />
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -99,7 +100,7 @@
             formData.append("It_Name", $("#It_Name").val());
             formData.append("It_Des", $("#It_Des").val());
             formData.append("It_Price", $("#It_Price").val());
-            formData.append("#It_Unit", $("##It_Unit").val());
+            formData.append("It_Unit", $("#It_Unit").val());
             formData.append("It_Img", $("#It_Img").get(0).files[0]);
 
 

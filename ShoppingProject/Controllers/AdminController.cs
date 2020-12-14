@@ -53,7 +53,7 @@ namespace ShoppingProject.Controllers
 
             return Json(data: new { Success = true, Message = " Add Successfully" }, JsonRequestBehavior.AllowGet);
         }
-        public ActionResult Edititem(int? id)
+        public ActionResult Edititem()
         {
             return View();
         }
