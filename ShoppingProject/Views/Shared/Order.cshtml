@@ -1,0 +1,13 @@
+﻿<ul class="nav navbar-nav navbar-right">
+    <li>
+        @if (Session["CartCounter"] == null)
+        {
+            @Html.ActionLink("Cart", "Order", "Shop", htmlAttributes: new { id = "cartitem" })
+        }
+        else
+        {
+            @Html.ActionLink("Cart(" + Session["CartCounter"] + ")", "Order", "Shop", htmlAttributes: new { id = "cartitem" })
+        }
+    </li>
+</ul>
+
