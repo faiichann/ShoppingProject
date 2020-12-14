@@ -54,7 +54,7 @@ a.profilelink:hover {
 
 .card2 {
     width: 100%;
-    height:91%;
+    height:92%;
     padding-top: 28px;
     border: 4px solid #926E50;
     border-radius: 15px;
@@ -366,6 +366,12 @@ a.profilechangepassword {
     }
 }
 
+@media screen and (max-width:450px) {
+    input.submitchangepersonal {
+        margin-bottom:6%;
+    }
+}
+
 @media screen and (max-width:383px) {
     .card1 {
         height:70vh;
@@ -441,7 +447,7 @@ a.profilechangepassword {
     }
 }
 
-@media screen and (max-width:300px) {
+@media screen and (max-width:310px) {
     .card1 {
         width: 190%;
     }
@@ -496,6 +502,9 @@ a.profilechangepassword {
     }
     input.changeaddress {
         width:55%;
+    }
+    input.inputchangepersonal {
+        width:45%!important;
     }
 }
 
@@ -617,7 +626,8 @@ input.submitchangepersonal {
     padding-right:10px;
     padding-left:10px;
     outline:none;
-    margin-top:7%;
+    margin-top:3%;
+    margin-bottom:3%;
     margin-left:35%;
 }
 
