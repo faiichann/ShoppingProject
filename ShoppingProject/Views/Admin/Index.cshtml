@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<ShoppingProject.ViewModel.ListModel>
 @{
     ViewBag.Title = "Index";
 }
@@ -9,6 +9,48 @@
     <hr />
     <div class="container">
         <a class="btn btn-primary" href="/Admin/Add">add new item</a><br /><br />
-
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Image</th>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Unit</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@item.Type</td>
+                    <td>
+                        <img src="@Url.Content(@item.Li_Img)"
+                             class="rounded-circle"
+                             height="60" width="60"
+                             asp-append-version="true" />
+                    </td>
+                    <td>@item.li_Code</td>
+                    <td>@item.Li_Name</td>
+                    <td>@item.Li_Des</td>
+                    <td>@item.Li_Price</td>
+                    <td>@item.Li_Unit</td>
+                    <td>
+                        <div class="row">
+                            <div class="col-2">
+                                <a href="/Admin/Edit">Edit</a>
+                            </div>
+                            <div class="col-3">
+                                <a href="#" style="color:red">Delete</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
     </div>
 }

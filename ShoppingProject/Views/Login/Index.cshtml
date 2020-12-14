@@ -4,7 +4,7 @@
 }
 
 <link href="~/Content/css/login.css" rel="stylesheet" />
-<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery-3.5.1.min.js"></script>
 <script src="~/Scripts/bootstrap.min.js"></script>
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 
@@ -127,13 +127,13 @@
                     $("#msg").show();
                 }
                 else {
-                    if ( name == "admin") {
+                    if (name == "admin") {
                         window.location.href = "/Admin/Index";
                     }
                     else {
                         window.location.href = "/Home/Index";
                     }
-                    
+
                     $("#msg").hide();
                 }
             }
