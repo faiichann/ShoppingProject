@@ -4,8 +4,8 @@
 }
 
 <link href="~/Content/css/login.css" rel="stylesheet" />
-<script src="~/Scripts/bootstrap.js"></script>
-<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 
 <div class="hero" style="background-image:url(../lib/images/bglogin3.png)">
@@ -17,18 +17,18 @@
                     <br /><br />
                     <div class="button-box">
                         <div id="btn"></div>
-                        <a style="text-decoration:none; border:0; outline:none; color:inherit;" type="button" class="toggle-btn" href="/Login/Index">Login</a>
+                        <a style="text-decoration:none; border:0; outline:none; color:inherit;" class="toggle-btn">Login </a>
                         <a style="text-decoration:none; border:0; outline:none; color:inherit;" class="toggle-btn" onclick="SignUp()">Register</a>
                     </div><br />
                 </div>
             </div>
             <div style="margin-top:5%;" class="row justify-content-center">
                 <div class="col-12">
-                    <form class="input-grouplogin" asp-action="Privacy">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div><br /><br />
-                        <input type="text" class="input-field" placeholder="Username" />
-                        <input style="margin-top:5%;" type="text" class="input-field" placeholder="Password" />
-                        <a href="/Login/Home" style="margin-top:15%;text-align:center;text-decoration:none; border:0; outline:none; color:inherit" type="submit" class="submit-btn">Login</a>
+                    <form class="input-grouplogin" id="loginForm">
+                        <div id="msg"><ul style="color:red;">Invalid Username Or Password</ul></div>
+                        <input class="input-field" type="text" name="U_Name" id="username" placeholder="UserName" />
+                        <input name="U_Password" id="pass" style="margin-top:5%;" type="password" class="input-field" placeholder="Password" />
+                        <a style="margin-top:15%;text-align:center;text-decoration:none; border:0; outline:none; color:inherit" class="submit-btn" onclick="Login()">Login</a>
                     </form>
                 </div>
             </div>
@@ -41,7 +41,6 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <a href="#" class="close" data-dismiss="modal">&times;</a>
-                    <h4 class="text-center">Register Form</h4>
                     <div id="message1">
                         <div class="alert alert-success">
                             <span class="glyphicon glyphicon-ok"></span>
@@ -59,20 +58,19 @@
                     <div class="form-box">
                         <div class="row justify-content-center">
                             <div class="col-12">
-                                <form class="input-group" asp-action="Privacy">
-                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div><br /><br />
-                                    <input style="margin-top:3%;" type="text" class="input-field" placeholder="Name" />
-                                    <input style="margin-top:3%;" type="text" class="input-field" placeholder="Email" />
-                                    <input type="text" class="input-field" placeholder="Username" />
-                                    <input style="margin-top:3%;" type="text" class="input-field" placeholder="Password" />
-                                    <input style="margin-top:3%;" type="text" class="input-field" placeholder="Confirm Password" />
-                                    <input style="margin-top:3%;" type="text" class="input-field" placeholder="Phone number" />
-                                    <input style="margin-top:3%;" type="text" class="input-field" placeholder="Address" />
-                                    <button style="margin-top:11%;" type="submit" class="submit-btn">Register</button>
+                                <h4 class="text-center">Register Form</h4>
+                                <form class="input-group" id="Registration">
+                                    <input name="U_Fname" id="user" style="margin-top:3%;" type="text" class="input-field" placeholder="Name" />
+                                    <input name="U_Email" id="email" style="margin-top:3%;" type="email" class="input-field" placeholder="Email" />
+                                    <input name="U_Name" id="username" type="text" class="input-field" placeholder="Username" />
+                                    <input name="U_Password" id="password" style="margin-top:3%;" type="password" class="input-field" placeholder="Password" />
+                                    <input name="U_Address" id="address" style="margin-top:3%;" type="text" class="input-field" placeholder="Address" />
+                                    <input name="U_Phone" id="phone" style="margin-top:3%;" type="tel" class="input-field" placeholder="Phone number" />
+                                    <button style="margin-top:11%;margin-bottom:5%;" type="submit" class="submit-btn" onclick="SaveForm()">Register</button>
                                 </form>
                             </div>
                         </div>
-                    </div><br /><br />
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,12 +86,51 @@
 
     }
     function SaveForm() {
+        var fname = $("#user").val();
+        var name = $("#username").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var address = $("#address").val();
+        var phone = $("#phone").val();
 
+        if (fname == "" || name == "" || password == "" || email == "" || address == "" || phone == "") {
+            $("#message1").hide();
+            $("#message2").show();
+            return false;
+        }
+
+        var data = $("#Registration").serialize();
+        $.ajax({
+            type: "post",
+            data: data,
+            url: "/Login/SaveData",
+            success: function (result) {
+
+                $("#message1").show();
+                $("#message2").hide();
+                $("#Registration")[0].reset();
+            }
+        });
     }
 
     $("#msg").hide();
     function Login() {
-        window.location.href = "/Login/Home";
+        var data = $("#loginForm").serialize();
+        $.ajax({
+            type: "post",
+            url: "/Login/CheckValidUser",
+            data: data,
+            success: function (result) {
+                if (result == "Fail") {
+                    $("#loginForm")[0].reset();
+                    $("#msg").show();
+                }
+                else {
+                    window.location.href = "/Login/Home";
+                    $("#msg").hide();
+                }
+            }
+        })
     }
 </script>
 
