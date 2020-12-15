@@ -30,6 +30,27 @@ a.changeimage {
     color: #FFFFFF; 
 }
 
+p.profilenamecard1 {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5vw;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 1px solid #926E50;
+    border-radius: 30px;
+    outline: none;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-top: 10%;
+}
+    p.profilenamecard1:hover {
+        background-color: #FFFFFF;
+        color: #4C251B;
+        outline: none;
+    }
+
 a.profilelink {
     font-family: Kanit;
     font-style: normal;
@@ -352,6 +373,9 @@ a.profilechangepassword {
     input.inputchangepersonal {
         width:60%!important;
     }
+    p.profilenamecard1 {
+        padding:0px 0px;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -375,6 +399,17 @@ a.profilechangepassword {
 @media screen and (max-width:383px) {
     .card1 {
         height:70vh;
+    }
+}
+@media screen and (max-width:380px) {
+    img.imgpersonal {
+        width: 120%;
+        margin-left: -10%;
+    }
+
+    a.profilelink {
+        font-size: 2vw;
+        padding:0px 0px;
     }
 }
 
@@ -437,15 +472,7 @@ a.profilechangepassword {
     }
 }
 
-@media screen and (max-width:380px) {
-    img.imgpersonal {
-        width:120%;
-        margin-left:-10%;
-    }
-    a.profilelink {
-        font-size:1.1vw;
-    }
-}
+
 
 @media screen and (max-width:310px) {
     .card1 {
@@ -560,6 +587,35 @@ a.profilechangepassword {
     }
     input.changepassword {
         width:60%;
+    }
+}
+
+@media screen and (max-width:281px) {
+    a.profilelink {
+        font-size: 3.3vw;
+    }
+    p.profilenamecard1 {
+        font-size:3vw;
+    }
+    p.profilenameID {
+        font-size: 4vw;
+    }
+    p.hello {
+        font-size: 4vw;
+    }
+    p.profilepersonaldetail {
+        font-size: 2.5vw;
+    }
+    p.profilepersonal {
+        font-size: 2.5vw;
+    }
+    a.profilechangepersonal {
+        font-size: 2vw;
+        margin-top: 5%;
+    }
+    p.profilepersonaldata {
+        font-size: 2.2vw;
+        margin-top: 0%;
     }
 }
 
