@@ -254,6 +254,12 @@ button, a  {
         .contactmodalbtn1 {
             margin-left: 6% !important;
         }
+        button.contactbtn {
+            margin-left:0%!important;
+        }
+        button.contactbtn2 {
+            margin-left: 40% !important;
+        }
     }
 
     .col-4 {
