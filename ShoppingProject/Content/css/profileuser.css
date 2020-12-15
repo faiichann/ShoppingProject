@@ -425,6 +425,9 @@ img.bgprofile2 {
     p.profilenamecard1 {
         padding:0px 0px;
     }
+    img.bgprofile2 {
+        margin-top: 60%;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -445,7 +448,7 @@ img.bgprofile2 {
     }
     img.bgprofile2 {
         height: 35%;
-        margin-top: 60%;
+        margin-top: 77%;
     }
 }
 
@@ -466,7 +469,7 @@ img.bgprofile2 {
     }
     img.bgprofile2 {
         height: 30%;
-        margin-top: 80%;
+        margin-top: 100%;
     }
 }
 
@@ -529,7 +532,11 @@ img.bgprofile2 {
     }
 }
 
-
+@media screen and (max-width:320px) {
+    img.bgprofile2 {
+        margin-top:120%;
+    }
+}
 
 @media screen and (max-width:310px) {
     .card1 {
