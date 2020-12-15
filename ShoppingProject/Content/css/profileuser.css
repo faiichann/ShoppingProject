@@ -563,7 +563,7 @@ th.orderth {
 
 
 table.ordertable {
-    height:350px;
+    height:300px;
     display:block;
     overflow-y:auto;
 }

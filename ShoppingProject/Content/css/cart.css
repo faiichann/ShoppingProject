@@ -7,9 +7,9 @@ th.orderth {
     display: table-cell;
 }
 table.ordertable {
-    height: 350px;
     display: block;
     overflow-y: auto;
+    height:300px;
 }
 .deletetable {
     border-collapse: collapse;
@@ -96,6 +96,29 @@ a.cancel:hover {
     padding-top: 12px;
 }
 
+img.img-cart {
+    height:45%;
+    margin-left:31%;
+    display:block;
+}
+
+.img-th {
+    margin-left:10%;
+}
+
+p.cart-totalprice {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5vw;
+    line-height: 174.5%;
+    text-align: center;
+    color: #435E39;
+    float: right;
+    margin-right: 17%;
+    margin-top: 1.5%;
+}
+
 @media screen and (max-width:990px) {
     .con {
         width: 15%;
@@ -104,6 +127,14 @@ a.cancel:hover {
     a.cancel {
         width: 15%;
         height: 0%;
+    }
+    p.cart-totalprice {
+        font-weight:300;
+        font-size:1.9vw;
+        margin-right:13%;
+    }
+    img.img-cart {
+        margin-left:20%; 
     }
 }
 @media screen and (max-width:750px){
@@ -114,6 +145,9 @@ a.cancel:hover {
     }
     .con {
         margin-top: 5%;
+    }
+    img.img-cart {
+        margin-left:10%;
     }
 }
 @media screen and (max-width:580px){
@@ -129,6 +163,19 @@ a.cancel:hover {
     .cardcart {
         width: 90%;
         margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    img.img-cart {
+        height: 40%;
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    p.cart-totalprice {
+        font-size: 3vw;
+        margin-right: 12%;
     }
 }
 @media screen and (max-width:430px){
@@ -156,6 +203,15 @@ a.cancel:hover {
 
     .topfont {
         font-size: 16px;
+    }
+    p.cart-totalprice {
+        font-size: 3.5vw;
+        margin-right: 9%;
+    }
+    img.img-cart {
+        height: 25%;
+        width: 110%;
+        margin-left: 0%;
     }
 }
 @media screen and (max-width:280px) {
