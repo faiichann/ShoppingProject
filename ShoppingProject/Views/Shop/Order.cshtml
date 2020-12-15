@@ -1,6 +1,8 @@
-﻿
+﻿@model IEnumerable<ShoppingProject.ViewModel.CartModel>
+
 @{
     ViewBag.Title = "Order";
+    decimal TotalAmount = 0.00M;
 }
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -8,40 +10,52 @@
 <link href="~/Content/css/cart.css" rel="stylesheet" />
 @if (Session["UserID"] != null)
 {
- 
+
     <div class="container">
         <div class="row">
             <h4 class="topfont text-center colorfont"><i class='fas fa-shopping-cart'></i>&nbsp; ตะกร้าสินค้า</h4>
-            <br />
+        </div>
+        <br />
+        <div class="row">
             <div class="cardcart" style="overflow-x:auto;">
                 <table class="deletetable ordertable">
                     <tr class="topic">
-                        <th class="intable1 orderth colorfont">ลำดับ</th>
+                        <th class="intable1 orderth colorfont"></th>
                         <th class="intable1 orderth colorfont" style="width:20%;">รายการ</th>
-                        <th class="intable1 orderth colorfont">ราคา</th>
                         <th class="intable1 orderth colorfont">จำนวน</th>
+                        <th class="intable1 orderth colorfont">ราคา</th>
+                        <th class="intable1 orderth colorfont">รวมราคา</th>
                         <th class="intable1 orderth"></th>
                     </tr>
-                    <tr class="topic">
-                        <td class="intable1 orderth colorfont">1</td>
-                        <td class="intable1 orderth colorfont">Smith</td>
-                        <td class="intable1 orderth colorfont">50</td>
-                        <td class="intable1 orderth colorfont"><input class="numproduct" type="number" name="amount" value="product" min="1" /></td>
-                        <td class="intable1 orderth"><a class="trash" href="#delete"><i class="fa fa-trash"></i></a></td>
+                    @foreach (var item in Model)
+                    {
+                        TotalAmount += item.Total;
+
+                        @: <tr>
+                            <td class="intable1 orderth colorfont">
+                                <img src="@Url.Content(item.Image)"
+                                     class="rounded-circle"
+                                     height="60" width="60"
+                                     asp-append-version="true" style="align-items:center;" />
+                            </td>
+                            <td class="intable1 orderth colorfont">@item.ItemName</td>
+                            @:<td class="intable1 orderth colorfont">
+                                <input class="numproduct" type="number" name="amount" value="@item.Quantity.ToString(format: "#,##0")" />
+                            @:</td>
+                            <td class="intable1 orderth colorfont">@item.UnitPrice.ToString(format: "#,##0.00")</td>
+                            <td class="intable1 orderth colorfont" style="text-align:right;">@item.Total.ToString(format: "#,##0.00")</td>
+                            <td class="intable1 orderth">@Html.ActionLink("Delete", "Delete", "Shop", new { id = item.ItemId, @class = "trash" }, null)</td>
+                            
+                        @:</tr>
+                    }
+                    <tr style="border-top:2px solid #ff6a00;">
+                        <td colspan="4" style="text-align:right;">
+                            <h3>Total Amount</h3>
+                        </td>
+                        <td style="text-align:right;">
+                            <h3>@TotalAmount.ToString(format: "#,##0.00")</h3>
+                        </td>
                     </tr>
-                    <tr class="topic">
-                        <td class="intable1 orderth colorfont">2</td>
-                        <td class="intable1 orderth colorfont">Jackson</td>
-                        <td class="intable1 orderth colorfont">94</td>
-                        <td class="intable1 orderth colorfont"><input class="numproduct" type="number" name="amount" value="product" min="1" /></td>
-                        <td class="intable1 orderth"><a class="trash" href="#delete"><i class="fa fa-trash"></i></a></td>
-                    </tr>
-                    <tr class="topic">
-                        <td class="intable1 orderth colorfont">3</td>
-                        <td class="intable1 orderth colorfont">Johnson</td>
-                        <td class="intable1 orderth colorfont">67</td>
-                        <td class="intable1 orderth colorfont"><input class="numproduct" type="number" name="amount" value="product" min="1" /></td>
-                        <td class="intable1 orderth colorfont"><a class="trash" href="#delete"><i class="fa fa-trash"></i></a></td>
                 </table>
             </div>
         </div>

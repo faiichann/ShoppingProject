@@ -5,6 +5,19 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ShopDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbBill">
+          <Key>
+            <PropertyRef Name="Bill_Id" />
+          </Key>
+          <Property Name="Bill_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderId" Type="int" />
+          <Property Name="ItemId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bill_Qty" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Bill_Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Bill_Total" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="Bill_Date" Type="datetime" />
+        </EntityType>
         <EntityType Name="tbItem">
           <Key>
             <PropertyRef Name="It_Id" />
@@ -18,6 +31,14 @@
           <Property Name="It_Img" Type="nvarchar(max)" />
           <Property Name="It_Unit" Type="int" />
           <Property Name="It_Delete" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbOrder">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderDate" Type="datetime" Nullable="false" />
+          <Property Name="OrderNo" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tbType">
           <Key>
@@ -40,7 +61,9 @@
           <Property Name="U_Fname" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="ShopDBModelStoreContainer">
+          <EntitySet Name="tbBill" EntityType="Self.tbBill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbItem" EntityType="Self.tbItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbOrder" EntityType="Self.tbOrder" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbType" EntityType="Self.tbType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbUser" EntityType="Self.tbUser" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -52,6 +75,8 @@
           <EntitySet Name="tbUsers" EntityType="ShopDBModel.tbUser" />
           <EntitySet Name="tbTypes" EntityType="ShopDBModel.tbType" />
           <EntitySet Name="tbItems" EntityType="ShopDBModel.tbItem" />
+          <EntitySet Name="tbBills" EntityType="ShopDBModel.tbBill" />
+          <EntitySet Name="tbOrders" EntityType="ShopDBModel.tbOrder" />
         </EntityContainer>
         <EntityType Name="tbUser">
           <Key>
@@ -86,6 +111,27 @@
           <Property Name="It_Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="It_Unit" Type="Int32" />
           <Property Name="It_Delete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbBill">
+          <Key>
+            <PropertyRef Name="Bill_Id" />
+          </Key>
+          <Property Name="Bill_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderId" Type="Int32" />
+          <Property Name="ItemId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_Qty" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Bill_Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Bill_Total" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="Bill_Date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tbOrder">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -127,6 +173,29 @@
                 <ScalarProperty Name="It_Code" ColumnName="It_Code" />
                 <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
                 <ScalarProperty Name="It_Id" ColumnName="It_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbBills">
+            <EntityTypeMapping TypeName="ShopDBModel.tbBill">
+              <MappingFragment StoreEntitySet="tbBill">
+                <ScalarProperty Name="Bill_Date" ColumnName="Bill_Date" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Bill_Total" ColumnName="Bill_Total" />
+                <ScalarProperty Name="Bill_Price" ColumnName="Bill_Price" />
+                <ScalarProperty Name="Bill_Qty" ColumnName="Bill_Qty" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="Bill_Id" ColumnName="Bill_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbOrders">
+            <EntityTypeMapping TypeName="ShopDBModel.tbOrder">
+              <MappingFragment StoreEntitySet="tbOrder">
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

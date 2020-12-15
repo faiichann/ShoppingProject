@@ -68,11 +68,26 @@ namespace ShoppingProject.Controllers
 
             return Json(data: new { Success = true, Message = " Add Successfully" }, JsonRequestBehavior.AllowGet);
         }
-        public ActionResult Edititem()
+        public ActionResult Edit()
         {
-            return View();
+            IEnumerable<ListModel> listStore = (from e in db.tbItems
+                                                join s in db.tbTypes
+                                                on e.Type_Id equals s.Type_Id
+                                                select new ListModel()
+                                                {
+                                                    Li_Id = e.It_Id,
+                                                    Li_Img = e.It_Img,
+                                                    Type = s.Type_Name,
+                                                    li_Code = e.It_Code,
+                                                    Li_Name = e.It_Name,
+                                                    Li_Des = e.It_Des,
+                                                    Li_Price = (decimal)e.It_Price,
+                                                    Li_Unit = (int)e.It_Unit
+                                                }).ToList();
+
+            return View(listStore);
         }
-        public ActionResult Deleteitem()
+        public ActionResult Delete()
         {
             return View();
         }

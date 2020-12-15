@@ -8,6 +8,8 @@
         <EntityTypeShape EntityType="ShopDBModel.tbUser" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="ShopDBModel.tbType" Width="1.5" PointX="4.875" PointY="0.75" />
         <EntityTypeShape EntityType="ShopDBModel.tbItem" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ShopDBModel.tbBill" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ShopDBModel.tbOrder" Width="1.5" PointX="2.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
