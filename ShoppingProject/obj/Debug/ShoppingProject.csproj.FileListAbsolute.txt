@@ -77,3 +77,7 @@ C:\Users\win10\source\repos\ShoppingProject\ShoppingProject\obj\Debug\ShoppingPr
 C:\Users\win10\source\repos\ShoppingProject\ShoppingProject\obj\Debug\ShoppingProject.csproj.CopyComplete
 C:\Users\win10\source\repos\ShoppingProject\ShoppingProject\obj\Debug\ShoppingProject.dll
 C:\Users\win10\source\repos\ShoppingProject\ShoppingProject\obj\Debug\ShoppingProject.pdb
+C:\Users\win10\source\repos\ShoppingProject\ShoppingProject\bin\EntityFramework.dll
+C:\Users\win10\source\repos\ShoppingProject\ShoppingProject\bin\EntityFramework.SqlServer.dll
+C:\Users\win10\source\repos\ShoppingProject\ShoppingProject\bin\EntityFramework.xml
+C:\Users\win10\source\repos\ShoppingProject\ShoppingProject\bin\EntityFramework.SqlServer.xml

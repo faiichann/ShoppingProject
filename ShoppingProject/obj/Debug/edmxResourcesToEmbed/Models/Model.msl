@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShopDBModelStoreContainer" CdmEntityContainer="ShopDBEntities">
+    <EntitySetMapping Name="tbUsers">
+      <EntityTypeMapping TypeName="ShopDBModel.tbUser">
+        <MappingFragment StoreEntitySet="tbUser">
+          <ScalarProperty Name="U_Fname" ColumnName="U_Fname" />
+          <ScalarProperty Name="U_Isvalid" ColumnName="U_Isvalid" />
+          <ScalarProperty Name="U_Phone" ColumnName="U_Phone" />
+          <ScalarProperty Name="U_Address" ColumnName="U_Address" />
+          <ScalarProperty Name="U_Password" ColumnName="U_Password" />
+          <ScalarProperty Name="U_Email" ColumnName="U_Email" />
+          <ScalarProperty Name="U_Name" ColumnName="U_Name" />
+          <ScalarProperty Name="U_Id" ColumnName="U_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTypes">
+      <EntityTypeMapping TypeName="ShopDBModel.tbType">
+        <MappingFragment StoreEntitySet="tbType">
+          <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+          <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbItems">
+      <EntityTypeMapping TypeName="ShopDBModel.tbItem">
+        <MappingFragment StoreEntitySet="tbItem">
+          <ScalarProperty Name="It_Delete" ColumnName="It_Delete" />
+          <ScalarProperty Name="It_Unit" ColumnName="It_Unit" />
+          <ScalarProperty Name="It_Img" ColumnName="It_Img" />
+          <ScalarProperty Name="It_Price" ColumnName="It_Price" />
+          <ScalarProperty Name="It_Des" ColumnName="It_Des" />
+          <ScalarProperty Name="It_Name" ColumnName="It_Name" />
+          <ScalarProperty Name="It_Code" ColumnName="It_Code" />
+          <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
+          <ScalarProperty Name="It_Id" ColumnName="It_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbOrders">
+      <EntityTypeMapping TypeName="ShopDBModel.tbOrder">
+        <MappingFragment StoreEntitySet="tbOrder">
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbBills">
+      <EntityTypeMapping TypeName="ShopDBModel.tbBill">
+        <MappingFragment StoreEntitySet="tbBill">
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Bill_Date" ColumnName="Bill_Date" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Bill_Total" ColumnName="Bill_Total" />
+          <ScalarProperty Name="Bill_Price" ColumnName="Bill_Price" />
+          <ScalarProperty Name="Bill_Qty" ColumnName="Bill_Qty" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Bill_Id" ColumnName="Bill_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

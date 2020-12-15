@@ -1,173 +1,114 @@
-﻿
+﻿@model IEnumerable<ShoppingProject.ViewModel.BillModel>
+
 @{
     ViewBag.Title = "Bill";
+    decimal? TotalBill = 0.00M;
+    decimal? Sentrate = 20.00M;
+    decimal? vat = 0.07M;
 }
 
 <link href="~/Content/css/bill.css" rel="stylesheet" />
-<script src="~/Scripts/js/navbar.js"></script>
-<link href="~/Content/css/navbar.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-<header class="main_menu home_menu topnav">
+
+@if (Session["UserID"] != null)
+{
+
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <img class="img-logo" src="~/lib/images/semilogo.png" width="30" height="30" alt="" loading="lazy">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <h4 class="fontreceipt text-center">Receipt</h4><br />
 
-            <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
-                <div class="navbar-nav">
-                    <div class="nav-item">
-                        <a class="navss " href="/Login/Home">HOME</a>
-                    </div>
-                    <div class="nav-item">
-                        <a class="navss" href="/Login/Aboutus">ABOUT</a>
-                    </div>
-                    <div class="nav-item">
-                        <a class="navss" href="/Shop/Index">SHOP</a>
-                    </div>
-                    <div class="nav-item">
-                        <a class="navss" href="/Login/Contact">CONTACT</a>
-                    </div>
-                    <div class="nav-item topnav-right">
-                        <a class="navs" href="/Login/Profile">UserXXXX</a>
-                    </div>
-                </div>
-                @*<ul class="navbar-nav topnav-right">
-
-                    </ul>*@
-            </div>
-
-        </nav>
-    </div>
-</header>
-<div class="container">
-    <h4 class="fontreceipt text-center">Receipt</h4><br />
-
-    <div class="card1">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <img class="logo" src="~/lib/images/semilogo.png" />
-            </div>
-        </div>
-        <hr class="line" /><br />
-        <h5 class="font3 text-center editfont1">รายละเอียดคำสั่งซื้อ</h5><br />
-        <div class="card2">
+        <div class="card1">
             <div class="row justify-content-center">
-                <div class="col-10">
-                    <div class="card4">
-                        <p class="font3 detailnum1">เลขที่ใบสั่งซื้อ:</p>
-                        <p class="font3 detailnum2">001</p><br /><br />
-                        <p class="font3 detailnum1">วันที่สั่งซื้อ:</p>
-                        <p class="font3 detailnum2">01/01/01</p><br /><br />
-                        <p class="font3 detailnum1">หมายเหตุ:</p>
-                        <p class="font3 detailnum2"></p><br /><br />
+                <div class="col-12">
+                    <img class="logo" src="~/lib/images/semilogo.png" />
+                </div>
+            </div>
+            <hr class="line" /><br />
+            <h5 class="font3 text-center editfont1">รายละเอียดคำสั่งซื้อ</h5><br />
+            <div class="card2">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="card4">
+                            <p class="font3 detailnum1">เลขที่ใบสั่งซื้อ:</p>
+                            <p class="font3 detailnum2">@Session["OrderNo"]</p><br /><br />
+                            <p class="font3 detailnum1">วันที่สั่งซื้อ:</p>
+                            <p class="font3 detailnum2">@Session["OrderDate"]</p><br /><br />
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="card3">
+                            <p class="font3 editfont1">ข้อมูลลูกค้า</p>
+                            <p class="font3 detailuser1">ชื่อ</p>
+                            <p class="font3 detailuser2">@Session["UserFName"]</p><br /><br />
+                            <p class="font3 detailuser1">ที่อยู่</p>
+                            <p class="font3 detailuser2">@Session["UserAddress"]</p><br /><br />
+                            <p class="font3 detailuser1">เบอร์โทร</p>
+                            <p class="font3 detailuser2">@Session["UserPhone"]</p><br /><br />
+                        </div>
                     </div>
                 </div>
             </div>
+            <br />
+            <div class="cardtable">
+                <table class="table1">
+                    <tr class="topic">
+                        <th class="font3 top" style="width:50%">รายการ</th>
+                        <th class="font3 top">จำนวน</th>
+                        <th class="font3 top">ราคา</th>
+                        <th class="font3 top">รวม</th>
+                    </tr>
+                    @foreach (var b in Model)
+                    {
+                        TotalBill += b.Bill_Total;
+                        @*<tr class="topic">
+                            <td class="intable1">@b.ItemName</td>
+                            <td class="intable1">@b.Quantity.ToString(format: "#,##0")</td>
+                            <td class="intable1">@b.UnitPrice.ToString(format: "#,##0.00")</td>
+                            <td class="intable1">@b.Total.ToString(format: "#,##0.00")</td>
+                        </tr>*@
+                        <tr class="topic">
+                                <td class="intable1">@b.ItemName</td>
+                                <td class="intable1">@b.Bill_Qty</td>
+                                <td class="intable1">@b.Bill_Price</td>
+                                <td class="intable1">@b.Bill_Total</td>
+                            </tr>
+                    }
+                </table>
+
+            </div>
+            <br />
             <div class="row justify-content-center">
-                <div class="col-10">
-                    <div class="card3">
-                        <p class="font3 editfont1">ข้อมูลลูกค้า</p>
-                        <p class="font3 detailuser1">ชื่อ</p>
-                        <p class="font3 detailuser2">คุณ ปพิชญา วิไธสง</p><br /><br />
-                        <p class="font3 detailuser1">ที่อยู่</p>
-                        <p class="font3 detailuser2">22/8 44 Garden place ถนนพุทธบูชา ซ.พุทธบูชา 44 แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140</p><br /><br />
-                        <p class="font3 detailuser1">เบอร์โทร</p>
-                        <p class="font3 detailuser2">0902505482</p><br /><br />
+                <div class="col-6">
+                    <div class="cardTY">
+                        <h2 class="font3 editfont1">THANK YOU</h2>
+                        <p class="font3 editfont2">
+                            ทางเราจะรีบจัดส่งสินค้าให้เร็วที่สุด
+                            กรุงเทพและปริมณฑล 1-2 วัน
+                            ต่างจังหวัด 2-3 วัน
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card5">
+                        <p class="font3 detailuser1">ราคารวม</p>
+                        <p class="font3 detailuser3">@TotalBill.ToString()</p><br /><br />
+                        <p class="font3 detailuser1">ค่าจัดส่ง</p>
+                        <p class="font3 detailuser3">@Sentrate.ToString()</p><br /><br />
+                        <p class="font3 detailuser1">ภาษีมูลค่าเพิ่ม</p>
+                        <p class="font3 detailuser3">@vat.ToString()</p><br /><br />
+                    </div>
+                    <br />
+                    <div class="cardprice">
+                        <p class="font3 detailuser1">ราคารวมสุทธิ</p>
+                        <p class="font3 fontprice">@TotalBill.ToString()</p><br /><br />
                     </div>
                 </div>
             </div>
-
-        </div>
-        <br />
-        <div class="cardtable">
-            <table class="table1">
-                <tr class="topic">
-                    <th class="font3 top">ลำดับ</th>
-                    <th class="font3 top" style="width:50%">รายการ</th>
-                    <th class="font3 top">จำนวน</th>
-                    <th class="font3 top">ราคา</th>
-                    <th class="font3 top">รวม</th>
-                </tr>
-                <tr class="topic">
-                    <td class="intable1">1</td>
-                    <td class="intable1">หมูสามชั้น</td>
-                    <td class="intable1">1</td>
-                    <td class="intable1">1</td>
-                    <td class="intable1">1</td>
-                </tr>
-                <tr class="topic">
-                    <td class="intable1">1</td>
-                    <td class="intable1">Red coral</td>
-                    <td class="intable1">1</td>
-                    <td class="intable1">1</td>
-                    <td class="intable1">1</td>
-                </tr>
-                <tr class="topic">
-                    <td class="intable1">1</td>
-                    <td class="intable1">ผักกาดขาวม่วงแดง</td>
-                    <td class="intable1">1</td>
-                    <td class="intable1">1</td>
-                    <td class="intable1">1</td>
-                </tr>
-                <tr>
-                    <td><br /></td>
-                    <td><br /></td>
-                    <td><br /></td>
-                    <td><br /></td>
-                    <td><br /></td>
-                </tr>
-                <tr>
-                    <td><br /></td>
-                    <td><br /></td>
-                    <td><br /></td>
-                    <td><br /></td>
-                    <td><br /></td>
-                </tr>
-                <tr>
-                    <td><br /></td>
-                    <td><br /></td>
-                    <td><br /></td>
-                    <td><br /></td>
-                    <td><br /></td>
-                </tr>
-            </table>
-
-        </div>
-        <br />
-        <div class="row justify-content-center">
-            <div class="col-6">
-                <div class="cardTY">
-                    <h2 class="font3 editfont1">THANK YOU</h2>
-                    <p class="font3 editfont2">
-                        ทางเราจะรีบจัดส่งสินค้าให้เร็วที่สุด
-                        กรุงเทพและปริมณฑล 1-2 วัน
-                        ต่างจังหวัด 2-3 วัน
-                    </p>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card5">
-                    <p class="font3 detailuser1">ราคารวม</p>
-                    <p class="font3 detailuser3">001 บาท</p><br /><br />
-                    <p class="font3 detailuser1">ค่าจัดส่ง</p>
-                    <p class="font3 detailuser3">001 บาท</p><br /><br />
-                    <p class="font3 detailuser1">ภาษีมูลค่าเพิ่ม</p>
-                    <p class="font3 detailuser3">7%</p><br /><br />
-                </div>
-                <br />
-                <div class="cardprice">
-                    <p class="font3 detailuser1">ราคาสุทธิ</p>
-                    <p class="font3 fontprice">001 บาท</p><br /><br />
-                </div>
-            </div>
+            <br /><br /><br />
+            <hr class="line" /><br />
         </div>
         <br /><br /><br />
-        <hr class="line" /><br />
+        <a class="payment" onclick="window.print()">พิมพ์ใบเสร็จ</a>
+        <a href="/Shop/Payment" class="payment">ชำระเงิน</a>><br /><br /><br /><br /><br /><br /><br />
     </div>
-    <br /><br /><br />
-    <a class="payment">พิมพ์ใบเสร็จ</a>
-    <a href="/Shop/Payment" class="payment">ชำระเงิน</a>><br /><br /><br /><br /><br /><br /><br />
-</div>
-
+}
