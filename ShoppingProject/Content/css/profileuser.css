@@ -264,6 +264,33 @@ a.profilechangepassword {
     padding-right: 16px;
 }
 
+img.bgprofile1 {
+    position: fixed;
+    width: 35%;
+    margin-top: -7%;
+    height: 70%;
+}
+
+img.bgprofile2 {
+    position: fixed;
+    width: 35%;
+    margin-left: 65%;
+    margin-top: 15%;
+    height: 70%;
+}
+
+@media screen and (max-width:1250px) {
+    img.bgprofile2 {
+        width: 30%;
+        margin-left: 70%;
+        margin-top: 20%;
+    }
+
+    img.bgprofile1 {
+        width: 30%;
+    }
+}
+
 
 @media screen and (max-width:991px) {
     .card1 {
@@ -280,6 +307,14 @@ a.profilechangepassword {
     }
     img.imgsavepersonal {
         margin-top:18%;
+    }
+    img.bgprofile2 {
+        height: 60%;
+        margin-top: 30%;
+    }
+
+    img.bgprofile1 {
+        height: 60%;
     }
 }
 
@@ -326,6 +361,20 @@ a.profilechangepassword {
     }
     img.imgsavepersonal {
         margin-top:26%;
+    }
+}
+@media screen and (max-width:600px) {
+    img.bgprofile2 {
+        width: 50%;
+        height: 40%;
+        margin-left: 60%;
+        margin-top: 40%;
+    }
+
+    img.bgprofile1 {
+        width: 50%;
+        height: 40%;
+        margin-top: -5%;
     }
 }
 
@@ -394,6 +443,10 @@ a.profilechangepassword {
     input.submitchangepersonal {
         margin-bottom:6%;
     }
+    img.bgprofile2 {
+        height: 35%;
+        margin-top: 60%;
+    }
 }
 
 @media screen and (max-width:383px) {
@@ -410,6 +463,10 @@ a.profilechangepassword {
     a.profilelink {
         font-size: 2vw;
         padding:0px 0px;
+    }
+    img.bgprofile2 {
+        height: 30%;
+        margin-top: 80%;
     }
 }
 
