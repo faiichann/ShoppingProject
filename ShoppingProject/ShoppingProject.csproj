@@ -150,7 +150,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\tbBill.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\tbItem.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbOrder.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tbType.cs">
@@ -160,8 +166,10 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\BillModel.cs" />
     <Compile Include="ViewModel\CartModel.cs" />
     <Compile Include="ViewModel\ItemModel.cs" />
+    <Compile Include="ViewModel\JoinDB.cs" />
     <Compile Include="ViewModel\ListModel.cs" />
     <Compile Include="ViewModel\TypeModel.cs" />
   </ItemGroup>

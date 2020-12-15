@@ -375,6 +375,13 @@ a.payment:hover {
        margin-left:5%;
    }
 }
-
+@media print {
+    a.payment {
+        display: none;
+    }
+    h4 {
+        display: none;
+    }
+}
 
 

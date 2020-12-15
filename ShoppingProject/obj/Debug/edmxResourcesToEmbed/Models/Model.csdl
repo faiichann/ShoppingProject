@@ -4,6 +4,8 @@
     <EntitySet Name="tbUsers" EntityType="ShopDBModel.tbUser" />
     <EntitySet Name="tbTypes" EntityType="ShopDBModel.tbType" />
     <EntitySet Name="tbItems" EntityType="ShopDBModel.tbItem" />
+    <EntitySet Name="tbOrders" EntityType="ShopDBModel.tbOrder" />
+    <EntitySet Name="tbBills" EntityType="ShopDBModel.tbBill" />
   </EntityContainer>
   <EntityType Name="tbUser">
     <Key>
@@ -38,5 +40,27 @@
     <Property Name="It_Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="It_Unit" Type="Int32" />
     <Property Name="It_Delete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbOrder">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbBill">
+    <Key>
+      <PropertyRef Name="Bill_Id" />
+    </Key>
+    <Property Name="Bill_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="ItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_Qty" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Bill_Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Bill_Total" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bill_Date" Type="DateTime" Precision="3" />
+    <Property Name="OrderNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

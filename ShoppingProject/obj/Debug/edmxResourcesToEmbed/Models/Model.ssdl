@@ -1,5 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ShopDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbBill">
+    <Key>
+      <PropertyRef Name="Bill_Id" />
+    </Key>
+    <Property Name="Bill_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderId" Type="int" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bill_Qty" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Bill_Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Bill_Total" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bill_Date" Type="datetime" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="tbItem">
     <Key>
       <PropertyRef Name="It_Id" />
@@ -13,6 +27,14 @@
     <Property Name="It_Img" Type="nvarchar(max)" />
     <Property Name="It_Unit" Type="int" />
     <Property Name="It_Delete" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbOrder">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="tbType">
     <Key>
@@ -35,7 +57,9 @@
     <Property Name="U_Fname" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="ShopDBModelStoreContainer">
+    <EntitySet Name="tbBill" EntityType="Self.tbBill" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbItem" EntityType="Self.tbItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbOrder" EntityType="Self.tbOrder" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbType" EntityType="Self.tbType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbUser" EntityType="Self.tbUser" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

@@ -28,7 +28,7 @@ namespace ShoppingProject.Models
         public virtual DbSet<tbUser> tbUsers { get; set; }
         public virtual DbSet<tbType> tbTypes { get; set; }
         public virtual DbSet<tbItem> tbItems { get; set; }
-        public virtual DbSet<tbBill> tbBills { get; set; }
         public virtual DbSet<tbOrder> tbOrders { get; set; }
+        public virtual DbSet<tbBill> tbBills { get; set; }
     }
 }

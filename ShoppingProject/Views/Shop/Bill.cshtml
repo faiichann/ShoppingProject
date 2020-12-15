@@ -1,6 +1,10 @@
-﻿
+﻿@model IEnumerable<ShoppingProject.ViewModel.BillModel>
+
 @{
     ViewBag.Title = "Bill";
+    decimal? TotalBill = 0.00M;
+    decimal? Sentrate = 20.00M;
+    decimal? vat = 0.07M;
 }
 
 <link href="~/Content/css/bill.css" rel="stylesheet" />
@@ -24,11 +28,9 @@
                     <div class="col-10">
                         <div class="card4">
                             <p class="font3 detailnum1">เลขที่ใบสั่งซื้อ:</p>
-                            <p class="font3 detailnum2">001</p><br /><br />
+                            <p class="font3 detailnum2">@Session["OrderNo"]</p><br /><br />
                             <p class="font3 detailnum1">วันที่สั่งซื้อ:</p>
-                            <p class="font3 detailnum2">01/01/01</p><br /><br />
-                            <p class="font3 detailnum1">หมายเหตุ:</p>
-                            <p class="font3 detailnum2"></p><br /><br />
+                            <p class="font3 detailnum2">@Session["OrderDate"]</p><br /><br />
                         </div>
                     </div>
                 </div>
@@ -37,68 +39,40 @@
                         <div class="card3">
                             <p class="font3 editfont1">ข้อมูลลูกค้า</p>
                             <p class="font3 detailuser1">ชื่อ</p>
-                            <p class="font3 detailuser2">คุณ ปพิชญา วิไธสง</p><br /><br />
+                            <p class="font3 detailuser2">@Session["UserFName"]</p><br /><br />
                             <p class="font3 detailuser1">ที่อยู่</p>
-                            <p class="font3 detailuser2">22/8 44 Garden place ถนนพุทธบูชา ซ.พุทธบูชา 44 แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140</p><br /><br />
+                            <p class="font3 detailuser2">@Session["UserAddress"]</p><br /><br />
                             <p class="font3 detailuser1">เบอร์โทร</p>
-                            <p class="font3 detailuser2">0902505482</p><br /><br />
+                            <p class="font3 detailuser2">@Session["UserPhone"]</p><br /><br />
                         </div>
                     </div>
                 </div>
-
             </div>
             <br />
             <div class="cardtable">
                 <table class="table1">
                     <tr class="topic">
-                        <th class="font3 top">ลำดับ</th>
                         <th class="font3 top" style="width:50%">รายการ</th>
                         <th class="font3 top">จำนวน</th>
                         <th class="font3 top">ราคา</th>
                         <th class="font3 top">รวม</th>
                     </tr>
-                    <tr class="topic">
-                        <td class="intable1">1</td>
-                        <td class="intable1">หมูสามชั้น</td>
-                        <td class="intable1">1</td>
-                        <td class="intable1">1</td>
-                        <td class="intable1">1</td>
-                    </tr>
-                    <tr class="topic">
-                        <td class="intable1">1</td>
-                        <td class="intable1">Red coral</td>
-                        <td class="intable1">1</td>
-                        <td class="intable1">1</td>
-                        <td class="intable1">1</td>
-                    </tr>
-                    <tr class="topic">
-                        <td class="intable1">1</td>
-                        <td class="intable1">ผักกาดขาวม่วงแดง</td>
-                        <td class="intable1">1</td>
-                        <td class="intable1">1</td>
-                        <td class="intable1">1</td>
-                    </tr>
-                    <tr>
-                        <td><br /></td>
-                        <td><br /></td>
-                        <td><br /></td>
-                        <td><br /></td>
-                        <td><br /></td>
-                    </tr>
-                    <tr>
-                        <td><br /></td>
-                        <td><br /></td>
-                        <td><br /></td>
-                        <td><br /></td>
-                        <td><br /></td>
-                    </tr>
-                    <tr>
-                        <td><br /></td>
-                        <td><br /></td>
-                        <td><br /></td>
-                        <td><br /></td>
-                        <td><br /></td>
-                    </tr>
+                    @foreach (var b in Model)
+                    {
+                        TotalBill += b.Bill_Total;
+                        @*<tr class="topic">
+                            <td class="intable1">@b.ItemName</td>
+                            <td class="intable1">@b.Quantity.ToString(format: "#,##0")</td>
+                            <td class="intable1">@b.UnitPrice.ToString(format: "#,##0.00")</td>
+                            <td class="intable1">@b.Total.ToString(format: "#,##0.00")</td>
+                        </tr>*@
+                        <tr class="topic">
+                                <td class="intable1">@b.ItemName</td>
+                                <td class="intable1">@b.Bill_Qty</td>
+                                <td class="intable1">@b.Bill_Price</td>
+                                <td class="intable1">@b.Bill_Total</td>
+                            </tr>
+                    }
                 </table>
 
             </div>
@@ -117,16 +91,16 @@
                 <div class="col-4">
                     <div class="card5">
                         <p class="font3 detailuser1">ราคารวม</p>
-                        <p class="font3 detailuser3">001 บาท</p><br /><br />
+                        <p class="font3 detailuser3">@TotalBill.ToString()</p><br /><br />
                         <p class="font3 detailuser1">ค่าจัดส่ง</p>
-                        <p class="font3 detailuser3">001 บาท</p><br /><br />
+                        <p class="font3 detailuser3">@Sentrate.ToString()</p><br /><br />
                         <p class="font3 detailuser1">ภาษีมูลค่าเพิ่ม</p>
-                        <p class="font3 detailuser3">7%</p><br /><br />
+                        <p class="font3 detailuser3">@vat.ToString()</p><br /><br />
                     </div>
                     <br />
                     <div class="cardprice">
-                        <p class="font3 detailuser1">ราคาสุทธิ</p>
-                        <p class="font3 fontprice">001 บาท</p><br /><br />
+                        <p class="font3 detailuser1">ราคารวมสุทธิ</p>
+                        <p class="font3 fontprice">@TotalBill.ToString()</p><br /><br />
                     </div>
                 </div>
             </div>
@@ -134,7 +108,7 @@
             <hr class="line" /><br />
         </div>
         <br /><br /><br />
-        <a class="payment">พิมพ์ใบเสร็จ</a>
+        <a class="payment" onclick="window.print()">พิมพ์ใบเสร็จ</a>
         <a href="/Shop/Payment" class="payment">ชำระเงิน</a>><br /><br /><br /><br /><br /><br /><br />
     </div>
 }

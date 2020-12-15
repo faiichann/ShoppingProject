@@ -38,5 +38,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tbOrders">
+      <EntityTypeMapping TypeName="ShopDBModel.tbOrder">
+        <MappingFragment StoreEntitySet="tbOrder">
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbBills">
+      <EntityTypeMapping TypeName="ShopDBModel.tbBill">
+        <MappingFragment StoreEntitySet="tbBill">
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Bill_Date" ColumnName="Bill_Date" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Bill_Total" ColumnName="Bill_Total" />
+          <ScalarProperty Name="Bill_Price" ColumnName="Bill_Price" />
+          <ScalarProperty Name="Bill_Qty" ColumnName="Bill_Qty" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Bill_Id" ColumnName="Bill_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

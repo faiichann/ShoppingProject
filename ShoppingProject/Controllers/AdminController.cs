@@ -86,6 +86,7 @@ namespace ShoppingProject.Controllers
                                                 }).ToList();
 
             return View(listStore);
+
         }
         public ActionResult Delete()
         {
