@@ -1,15 +1,21 @@
-﻿body {
+﻿a, button {
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+body {
     background-color: rgba(178, 255, 164,0.1);
 }
+
 .aboutbg1 {
     position: absolute;
-    margin-left:-14%;
+    margin-left: 0%;
 }
 
 .aboutbg2 {
     position: absolute;
-    margin-left: 78.5%;
-    margin-top: -4%;
+    margin-left: 91.5%;
+    margin-top: 5%;
 }
 
 p.about-header {
@@ -19,8 +25,8 @@ p.about-header {
     font-size: 3.4vw;
     line-height: 108px;
     color: #435E39;
-    text-align:center;
-    margin-top:7%;
+    text-align: center;
+    margin-top: 7%;
 }
 
 p.about-des {
@@ -40,8 +46,8 @@ p.about-smile {
     font-size: 2vw;
     line-height: 72px;
     color: #435E39;
-    text-align:center;
-    margin-top:4%;
+    text-align: center;
+    margin-top: 4%;
 }
 
 img.aboutpic {
@@ -49,7 +55,7 @@ img.aboutpic {
     border: none;
     outline: none;
     transition: transform .25s;
-    width:100%;
+    width: 100%;
 }
 
     img.aboutpic:hover {
@@ -64,7 +70,6 @@ img.aboutpic {
     background-position: center;
     background-size: cover;
     position: absolute;
-    
 }
 
 p.about-our-header {
@@ -75,14 +80,14 @@ p.about-our-header {
     line-height: 72px;
     text-align: center;
     color: #435E39;
-    margin-top:5%;
+    margin-top: 5%;
 }
 
 .grid-container-aboutus {
-    display:grid;
-    grid-template-columns:auto auto auto auto;
-    padding:20px;
-    padding-left:75px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 20px;
+    padding-left: 75px;
 }
 
 .card {
@@ -92,7 +97,7 @@ p.about-our-header {
     padding-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
-    border-radius:17px;
+    border-radius: 17px;
 }
 
 img.img-team {
@@ -100,7 +105,7 @@ img.img-team {
     border-radius: 100%;
     max-width: 100%;
     margin-left: 22%;
-    position:relative;
+    position: relative;
 }
 
 
@@ -131,16 +136,30 @@ img.aboutimgicon {
     border-radius: 100%;
     border: none;
     margin-top: -2%;
-    margin-right:3%;
+    margin-right: 3%;
 }
 
 
+
+@media screen and (max-width:1250px) {
+    .aboutbg2 {
+        margin-left: 88.5%;
+    }
+}
+
+@media screen and (max-width:1020px) {
+    .aboutbg2 {
+        margin-left: 86.5%;
+    }
+}
+
 @media screen and (max-width:991px) {
     .aboutbg1 {
-        margin-left:-18%;
+        margin-left: -4%;
     }
+
     .aboutbg2 {
-        margin-left:72.5%;
+        margin-left: 86%;
     }
 }
 
@@ -151,44 +170,54 @@ img.aboutimgicon {
     }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:921px) {
     .aboutbg2 {
-        margin-left:74.5%;
+        margin-left: 84.5%;
     }
 }
+
 
 @media screen and (max-width:800px) {
-    .aboutbg2 {
-        margin-left:76.5%;
-    }
     .card {
-        margin-left:-18%;
+        margin-left: -18%;
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:795px) {
     .aboutbg2 {
-        margin-left:66.5%;
+        margin-left: 83.5%;
+    }
+}
+
+@media screen and (max-width:755px) {
+    .aboutbg2 {
+        margin-left: 82%;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .aboutbg2 {
+        margin-left: 80%;
     }
 }
 
 @media screen and (max-width:680px) {
     .card {
-        margin-left:-27%;
-        width:110%;
-    }
-    
-    .aboutbg2 {
-        margin-left:68.5%;
+        margin-left: -27%;
+        width: 110%;
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:650px) {
     .aboutbg2 {
-        margin-left:72.5%;
+        margin-left: 78.5%;
     }
-    .aboutbg1 {
-        margin-left:-23%;
+}
+
+@media screen and (max-width:605px) {
+
+    .aboutbg2 {
+        margin-left: 77%;
     }
 
     .grid-container-aboutus {
@@ -202,103 +231,115 @@ img.aboutimgicon {
     }
 
     p.about-header {
-        font-size:4vw;
+        font-size: 4vw;
     }
+
     p.about-des {
-        font-size:2vw;
+        font-size: 2vw;
     }
+
     p.about-smile {
-        font-size:3vw;  
+        font-size: 3vw;
     }
+
     p.about-our-header {
-        font-size:3vw;
+        font-size: 3vw;
     }
+
     p.about-duty {
-        font-size:2.5vw;
+        font-size: 2.5vw;
     }
+
     p.about-teamdetail {
-        font-size:1.6vw;
+        font-size: 1.6vw;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .aboutbg1, .aboutbg2 {
+        display: none;
     }
 }
 
 @media screen and (max-width:500px) {
     .about-img-ourteam {
-        width:110%;
+        width: 100%;
     }
 }
 
 @media screen and (max-width:450px) {
     .aboutbg1 {
-        margin-left:-28%;
+        margin-left: -28%;
     }
+
     .card {
-        width:110%;
-        margin-left:-12%;
+        width: 110%;
+        margin-left: -12%;
     }
 }
 
 @media screen and (max-width:360px) {
     .card {
-        width:130%;
-        margin-left:-42%;
+        width: 130%;
+        margin-left: -42%;
     }
-    .aboutbg1 {
-        margin-left: -30%;
-        margin-top: -20%;
-    }
-    .aboutbg2 {
-        margin-left:64%;
-    }
+
     .grid-container-aboutus {
         grid-gap: 30px 20px;
     }
+
     p.about-header {
-        font-size:6vw;
+        font-size: 6vw;
     }
+
     p.about-des {
-        font-size:3.4vw;
+        font-size: 3.4vw;
     }
+
     p.about-smile {
-        font-size:5vw;
+        font-size: 5vw;
     }
+
     img.aboutpic {
         width: 130%;
         border-radius: 15px;
     }
+
     p.about-our-header {
-        font-size:5vw;
+        font-size: 5vw;
     }
+
     p.about-duty {
-        font-size:3.7vw;
+        font-size: 3.7vw;
     }
+
     p.about-teamdetail {
-        font-size:2.2vw;
+        font-size: 2.2vw;
     }
 }
 
 @media screen and (max-width:320px) {
     .about-img-ourteam {
-        width:120%;
+        width: 120%;
     }
+
     .card {
-        margin-left:-32%;
+        margin-left: -32%;
     }
 }
 
 @media screen and (max-width:300px) {
 
-    .aboutbg1, .aboutbg2 {
-        display:none;
+    .grid-container-aboutus {
+        grid-template-columns: repeat(1,auto);
     }
 
-    .grid-container-aboutus {
-        grid-template-columns :repeat(1,auto);
-    }
     .card {
-        width:90%;
-        margin-left:-7%;
+        width: 90%;
+        margin-left: -7%;
     }
+
     .about-img-ourteam {
-        width:100%;
+        width: 100%;
     }
 }
