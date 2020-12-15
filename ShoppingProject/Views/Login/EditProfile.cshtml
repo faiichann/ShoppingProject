@@ -7,14 +7,16 @@
 
 @if (Session["UserID"] != null)
 {
-   
+
+    <img class="bgprofile1" src="~/lib/images/bgprofile1.png" />
+    <img class="bgprofile2" src="~/lib/images/bgprofile2.png" />
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-3">
                 <div class="card1">
                     <div class="container">
                         <center>
-                            <a href="/Login/Profile" class="profilelink">Hello : @Session["UserName"]</a>
+                            <p class="profilenamecard1">Hello : @Session["UserName"]</p><br />
                             <a href="/Login/Profile" class="profilelink">ข้อมูลส่วนตัว</a><br /><br /><br />
                             <a href="/Login/History" class="profilelink">รายการสั่งซื้อ</a><br /><br /><br />
                             <a href="/Login/Logout" class="profilelink">ออกจากระบบ</a><br />
@@ -28,19 +30,16 @@
                 <div class="card2">
                     <div class="container">
                         <p class="hello">
-                            Hello,
-                        </p>
-                        <p class="profilenameID">
-                            INEEDSLEEP
+                            แก้ไขข้อมูลส่วนตัว
                         </p><br />
                         <p class="profilepersonal">
                             ข้อมูลส่วนตัว
                         </p><br /><br />
-                        <form>
+                        <form >
                             <p class="profilepersonaldetail">
-                                วันเกิด
+                                ชื่อ-นามสกุล
                             </p>
-                            <input type="date" class="inputchangepersonal form-control" /><br /><br />
+                            <input type="text" class="inputchangepersonal form-control" /><br /><br />
                             <p class="profilepersonaldetail">
                                 เบอร์ติดต่อ
                             </p>
@@ -48,7 +47,15 @@
                             <p class="profilepersonaldetail">
                                 อีเมล
                             </p>
-                            <input type="email" class="inputchangepersonal form-control" /><br />
+                            <input type="email" class="inputchangepersonal form-control" /><br /><br />
+                            <p class="profilepersonaldetail">
+                                ที่อยู่
+                            </p>
+                            <input type="text" class="inputchangepersonal form-control" /><br /><br />
+                            <p class="profilepersonaldetail">
+                                รหัสผ่าน
+                            </p>
+                            <input type="password" class="inputchangepersonal form-control" /><br /><br />
                             <input type="submit" class="submitchangepersonal" value="ยืนยันการแก้ไข" />
                         </form>
 

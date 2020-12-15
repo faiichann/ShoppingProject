@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Data";
+}
+<link href="~/Content/css/Admin-data.css" rel="stylesheet" />
+
+<img class="bgprofile1" src="~/lib/images/bgprofile1.png" />
+<img class="bgprofile2" src="~/lib/images/bgprofile2.png" />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <div class="card1">
+                <div class="container">
+                    <center>
+                        <p class="profilenamecard1">Hello : @Session["UserName"]</p><br />
+                        <a href="/Admin/Data" class="profilelink">ข้อมูลยอดขาย</a><br /><br /><br />
+                        <a href="/Admin/Add" class="profilelink">เพิ่มสินค้า</a><br /><br /><br />
+                        <a href="/Admin/Index" class="profilelink">คลังสินค้า</a><br /><br /><br />
+                        <a href="/Login/Logout" class="profilelink">ออกจากระบบ</a><br /><br /><br />
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-9">
+            <div class="card2">
+                <div class="container">
+                    <p class="hello">
+                        Admin Manager
+                    </p>
+                    <br />
+                    <p class="profilepersonal">
+                        ข้อมูลยอดขาย
+                    </p><br /><br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

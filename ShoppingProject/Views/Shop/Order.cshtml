@@ -10,59 +10,43 @@
 <link href="~/Content/css/cart.css" rel="stylesheet" />
 @if (Session["UserID"] != null)
 {
-
-    <div class="container">
+   @:<div class="container">
         <div class="row">
-            <h4 class="topfont text-center colorfont"><i class='fas fa-shopping-cart'></i>&nbsp; ตะกร้าสินค้า</h4>
-        </div>
-        <br />
-        <div class="row">
+            <h4 class="topfont text-center colorfont"><i class='fas fa-shopping-cart'></i>ตะกร้าสินค้า</h4>
+            <br />
             <div class="cardcart" style="overflow-x:auto;">
                 @using (Html.BeginForm("Bill", "Shop", FormMethod.Post))
                 {
                     <table class="deletetable ordertable">
                         <tr class="topic">
-                            <th class="intable1 orderth colorfont"></th>
-                            <th class="intable1 orderth colorfont" style="width:20%;">รายการ</th>
-                            <th class="intable1 orderth colorfont">จำนวน</th>
+                            <th class="intable1 orderth colorfont img-th">รูปสินค้า</th>
+                            <th class="intable1 orderth colorfont" style="width:1%;">รายการ</th>
                             <th class="intable1 orderth colorfont">ราคา</th>
-                            <th class="intable1 orderth colorfont">รวมราคา</th>
+                            <th class="intable1 orderth colorfont">จำนวน</th>
+                            <th class="intable1 orderth colorfont">ราคาทั้งหมด</th>
                             <th class="intable1 orderth"></th>
                         </tr>
                         @foreach (var item in Model)
                         {
                             TotalAmount += item.Total;
-
-                            @: <tr>
-                                <td class="intable1 orderth colorfont">
-                                    <img src="@Url.Content(item.Image)"
-                                         class="rounded-circle"
-                                         height="60" width="60"
-                                         asp-append-version="true" style="align-items:center;" />
-                                </td>
+                            <tr class="topic">
+                                <td class="intable1 orderth colorfont"><img class="img-cart" src="@Url.Content(item.Image)" /></td>
                                 <td class="intable1 orderth colorfont">@item.ItemName</td>
-                                @:<td class="intable1 orderth colorfont">
-                                    <input class="numproduct" type="number" name="amount" value="@item.Quantity.ToString(format: "#,##0")" />
-                                @:</td>
                                 <td class="intable1 orderth colorfont">@item.UnitPrice.ToString(format: "#,##0.00")</td>
-                                <td class="intable1 orderth colorfont" style="text-align:right;">@item.Total.ToString(format: "#,##0.00")</td>
-                                <td class="intable1 orderth">@Html.ActionLink("Delete", "Delete", "Shop", new { id = item.ItemId, @class = "trash" }, null)</td>
-
-                            @:</tr>
+                                <td class="intable1 orderth colorfont"><input class="numproduct" type="number" name="amount" value="@item.Quantity.ToString(format: "#,##0")" /></td>
+                                <td class="intable1 orderth colorfont">@item.Total.ToString(format: "#,##0.00")</td>
+                                <td class="intable1 orderth">@Html.ActionLink("Delete", "Delete", "Shop", new { id = item.ItemId, @class = "fa fa-trash" }, null)</td>
+                            </tr>
                         }
-                        <tr style="border-top:2px solid #ff6a00;">
-                            <td colspan="4" style="text-align:right;">
-                                <h3>Total Amount</h3>
-                            </td>
-                            <td style="text-align:right;">
-                                <h3>@TotalAmount.ToString(format: "#,##0.00")</h3>
-                            </td>
-                        </tr>
+
                     </table>
-                    <input type="button" name="Edit" value="Shop" id="btn1AddCart" class="btn btn-primary" />
-                    <input type="submit" name="Save" value="Save" id="SaveOrder" class="btn btn-success" onclick="Savedata()" />
+                    <p class="cart-totalprice">
+                        @TotalAmount.ToString(format: "#,##0.00")
+                    </p>
+                @:</div>
+            <input type="submit" name="Save" value="Save" id="SaveOrder" class="con fontcon" onclick="Savedata()" />
+            <a class="cancel font" href="/Shop/Index">ซื้อสินค้า</a>
                 }
-            </div>
         </div>
     </div>
 }

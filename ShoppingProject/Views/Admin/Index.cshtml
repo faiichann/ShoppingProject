@@ -2,55 +2,70 @@
 @{
     ViewBag.Title = "Index";
 }
+<link href="~/Content/css/Admin-data.css" rel="stylesheet" />
 @if (Session["UserID"] != null)
 {
-
-    <h2>Hello : @Session["UserName"]</h2>
-    <hr />
+    <img class="bgprofile1" src="~/lib/images/bgprofile1.png" />
+    <img class="bgprofile2" src="~/lib/images/bgprofile2.png" />
     <div class="container">
-        <a class="btn btn-primary" href="/Admin/Add">add new item</a><br /><br />
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Image</th>
-                    <th>Code</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Unit</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                <tr>
-                    <td>@item.Type</td>
-                    <td>
-                        <img src="@Url.Content(@item.Li_Img)"
-                             class="rounded-circle"
-                             height="60" width="60"
-                             asp-append-version="true" />
-                    </td>
-                    <td>@item.li_Code</td>
-                    <td>@item.Li_Name</td>
-                    <td>@item.Li_Des</td>
-                    <td>@item.Li_Price</td>
-                    <td>@item.Li_Unit</td>
-                    <td>
-                        <div class="row">
-                            <div class="col-2">
-                                <a href="/Admin/Edit" id="@item.Li_Id">Edit</a>
-                            </div>
-                            <div class="col-3">
-                                <a href="/Admin/Delete" id="@item.Li_Id" style="color:red">Delete</a>
-                            </div>
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <div class="card1">
+                    <div class="container">
+                        <center>
+                            <p class="profilenamecard1">Hello : @Session["UserName"]</p><br />
+                            <a href="/Admin/Data" class="profilelink">ข้อมูลยอดขาย</a><br /><br /><br />
+                            <a href="/Admin/Add" class="profilelink">เพิ่มสินค้า</a><br /><br /><br />
+                            <a href="/Admin/Index" class="profilelink">คลังสินค้า</a><br /><br /><br />
+                            <a href="/Login/Logout" class="profilelink">ออกจากระบบ</a><br /><br /><br />
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-9">
+                <div class="card2">
+                    <div class="container">
+                        <p class="hello">
+                            Admin Manager
+                        </p>
+                        <br />
+                        <p class="profilepersonal">
+                            คลังสินค้า
+                        </p><br /><br />
+                        <div style="overflow-x:auto;">
+                            <table class="deletetable ordertable">
+                                <tr class="topic">
+                                    <th class="intable1 orderth font2">ประเภท</th>
+                                    <th class="intable1 orderth font2">รูปสินค้า</th>
+                                    <th class="intable1 orderth font2">โค้ดสินค้า</th>
+                                    <th class="intable1 orderth font2">ชื่อสินค้า</th>
+                                    <th class="intable1 orderth font2">ราคาสินค้า</th>
+                                    <th class="intable1 orderth font2">ราคาสินค้า</th>
+                                    <th class="intable1 orderth font2">จำนวนสินค้า</th>
+                                    <th class="intable1 orderth font2"></th>
+                                    <th class="intable1 orderth font2"></th>
+                                </tr>
+                                @foreach (var item in Model)
+                                {
+                            <tr class="topic">
+                                <td class="intable1 orderth font2">@item.Type</td>
+                                <td class="intable1 orderth"><img class="admin-product" src="@Url.Content(@item.Li_Img)" /></td>
+                                <td class="intable1 orderth font2">@item.li_Code</td>
+                                <td class="intable1 orderth font2">@item.Li_Name</td>
+                                <td class="intable1 orderth font2">@item.Li_Des</td>
+                                <td class="intable1 orderth font2">@item.Li_Price บาท</td>
+                                <td class="intable1 orderth font2">@item.Li_Unit บาท</td>
+                                <td class="intable1 orderth font2"><a class="edit font" href="/Admin/Edit" id="@item.Li_Id">Edit</a></td>
+                                <td class="intable1 orderth font2"><a class="cancel" href="/Admin/Delete" id="@item.Li_Id">Delete</a></td>
+                            </tr>
+                                }
+
+                            </table>
                         </div>
-                    </td>
-                </tr>
-                }
-            </tbody>
-        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 }

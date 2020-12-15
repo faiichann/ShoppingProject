@@ -88,6 +88,10 @@ namespace ShoppingProject.Controllers
             return View(listStore);
 
         }
+        public ActionResult Data()
+        {
+            return View();
+        }
         public ActionResult Delete()
         {
             return View();

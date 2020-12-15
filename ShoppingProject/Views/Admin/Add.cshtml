@@ -1,81 +1,86 @@
 ﻿@model ShoppingProject.ViewModel.ItemModel
+
 @{
     ViewBag.Title = "Add";
 }
 <script src="~/Scripts/jquery-3.5.1.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<link href="~/Content/css/Admin-data.css" rel="stylesheet" />
 @if (Session["UserID"] != null)
 {
-    <h2>Add Item</h2>
-    <hr />
-
+    <img class="bgprofile1" src="~/lib/images/bgprofile1.png" />
+    <img class="bgprofile2" src="~/lib/images/bgprofile2.png" />
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    Category :
-                    @Html.DropDownListFor(model => model.Type_Id, new SelectList(Model.TypeListItem, dataValueField: "Value", dataTextField: "Text"),
-htmlAttributes: new { @class = "form-control" })
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    Item Code :
-                    @Html.TextBoxFor(expression: model => model.It_Code, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    Item Name :
-                    @Html.TextBoxFor(expression: model => model.It_Name, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    Description :
-                    @Html.TextBoxFor(expression: model => model.It_Des, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    Price :
-                    @Html.TextBoxFor(expression: model => model.It_Price, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    Unit:
-                    @Html.TextBoxFor(expression: model => model.It_Unit, htmlAttributes: new { @class = "form-control", autocomplete = "Off" })
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    Image :
-                    @Html.TextBoxFor(expression: model => model.It_Img, htmlAttributes: new { type = "file", @class = "form-contro" })
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-6">
-                        <input type="button" value="Save" name="save" class="btn btn-primary" id="btnSave" />
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <div class="card1">
+                    <div class="container">
+                        <center>
+                            <p class="profilenamecard1">Hello : @Session["UserName"]</p><br />
+                            <a href="/Admin/Data" class="profilelink">ข้อมูลยอดขาย</a><br /><br /><br />
+                            <a href="/Admin/Add" class="profilelink">เพิ่มสินค้า</a><br /><br /><br />
+                            <a href="/Admin/Index" class="profilelink">คลังสินค้า</a><br /><br /><br />
+                            <a href="/Login/Logout" class="profilelink">ออกจากระบบ</a><br /><br /><br />
+                        </center>
                     </div>
-                    <div class="col-6">
-                        <a href="/Admin/Index" class="btn btn-success" style="width:120px;">Back to Store</a>
+                </div>
+            </div>
+
+            <div class="col-9">
+                <div class="card2">
+                    <div class="container">
+                        <p class="hello">
+                            Admin Manager
+                        </p>
+                        <br />
+                        <p class="profilepersonal">
+                            เพิ่มสินค้า
+                        </p><br /><br />
+                                  <form>
+                                      <p class="profilepersonaldetail">
+                                          เลือกชนิดของสินค้า
+                                      </p>&nbsp;&nbsp;&nbsp;
+                                          @Html.DropDownListFor(model => model.Type_Id, new SelectList(Model.TypeListItem, dataValueField: "Value", dataTextField: "Text"),
+          htmlAttributes: new { @class = "form-control admin-select" })
+                                      <br /><br />
+                                      <p class="profilepersonaldetail">
+                                          รหัสสินค้า
+                                      </p>
+                                      @Html.TextBoxFor(expression: model => model.It_Code, htmlAttributes: new { @class = "form-control inputchangepersonal", autocomplete = "Off" })<br /><br /><br />
+                                      <p class="profilepersonaldetail">
+                                          ชื่อสินค้า
+                                      </p>
+                                      @Html.TextBoxFor(expression: model => model.It_Name, htmlAttributes: new { @class = "form-control inputchangepersonal", autocomplete = "Off" })<br /><br /><br />
+                                      <p class="profilepersonaldetail">
+                                          คำอธิบาย
+                                      </p>
+                                      @Html.TextBoxFor(expression: model => model.It_Des, htmlAttributes: new { @class = "form-control inputchangepersonal", autocomplete = "Off" })<br /><br /><br />
+                                      <p class="profilepersonaldetail">
+                                          ราคา
+                                      </p>
+                                      @Html.TextBoxFor(expression: model => model.It_Price, htmlAttributes: new { @class = "form-control inputchangepersonal", autocomplete = "Off" })<br /><br /><br />
+                                      <p class="profilepersonaldetail">
+                                          จำนวน
+                                      </p>
+                                      @Html.TextBoxFor(expression: model => model.It_Unit, htmlAttributes: new { @class = "form-control inputchangepersonal", autocomplete = "Off" })<br /><br /><br />
+                                      <p class="profilepersonaldetail">
+                                          รูปสินค้า
+                                      </p>
+                                      @Html.TextBoxFor(expression: model => model.It_Img, htmlAttributes: new { type = "file", @class = "inputchangepersonal file" })<br /><br />
+                                      <div class="row">
+                                          <div class="form-group">
+                                              <div class="row">
+                                                  <div class="col-6">
+                                                      <input type="button" value="Save" name="save" class="submitchangepersonal" id="btnSave" />
+                                                  </div>
+                                                  <div class="col-6">
+                                                      <a href="/Admin/Index" class="btn btn-success" style="width:120px;">Back to Store</a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </form>
                     </div>
                 </div>
             </div>

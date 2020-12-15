@@ -59,7 +59,7 @@
                                 <div class="card">
                                     <a class="shop-addcart" asp-action="#">
                                         <div class="image">
-                                            <img class="card-inner" src="@Url.Content(@item.Li_Img)" style="max-width:100%;border-radius:10px;"/>
+                                            <img class="card-inner" src="@Url.Content(@item.Li_Img)" style="max-width:100%;border-radius:10px;" />
                                             <div class="img-overlay" itemid="@item.Li_Id" id="btnAddCart" onclick="AddToCart(this)" itemscope="">
                                                 <div class="img-title">
                                                     <p class="img-des">
@@ -75,9 +75,7 @@
                                     <p class="productprice1">
                                         ราคา
                                     </p>
-                                    <p class="productprice2">
-                                        @item.Li_Price
-                                    </p><br />
+                                    <input type="text" class="productprice2" value="@item.Li_Price/กก" disabled><br />
                                     <a class="addcartbtn" asp-action="#">Add to Cart</a><br />
 
                                 </div>

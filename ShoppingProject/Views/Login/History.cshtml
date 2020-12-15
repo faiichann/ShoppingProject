@@ -6,19 +6,18 @@
 
 @if (Session["UserID"] != null)
 {
- 
+    <img class="bgprofile1" src="~/lib/images/bgprofile1.png" />
+    <img class="bgprofile2" src="~/lib/images/bgprofile2.png" />
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-3">
                 <div class="card1">
                     <div class="container">
                         <center>
-                            <img class="imgpersonal" src="~/lib/images/test.jpg" /><br />
-                            <a class="changeimage" href="#">แก้ไขรูปภาพ</a><br /><br />
+                            <p class="profilenamecard1">Hello : @Session["UserName"]</p><br />
                             <a href="/Login/Profile" class="profilelink">ข้อมูลส่วนตัว</a><br /><br /><br />
                             <a href="/Login/History" class="profilelink">รายการสั่งซื้อ</a><br /><br /><br />
-                            <a asp-action="logout" class="profilelink">ออกจากระบบ</a><br />
-
+                            <a href="/Login/Logout" class="profilelink">ออกจากระบบ</a><br />
                         </center>
                     </div>
                 </div>

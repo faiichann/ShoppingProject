@@ -1,7 +1,7 @@
 ﻿/*Personal*/
 .card1 {
     width: 100%;
-    height: 92%;
+    height: 95%;
     background-color: #926E50;
     box-shadow: 4px 6px 7px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -10,12 +10,36 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+p.profilenamecard1 {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5vw;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 1px solid #926E50;
+    border-radius: 30px;
+    outline: none;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-top: 10%;
+}
+
+    p.profilenamecard1:hover {
+        background-color: #FFFFFF;
+        color: #4C251B;
+        outline: none;
+    }
+
 img.imgpersonal {
     width: 80%;
     height: 20vh;
     object-fit: cover;
     border-radius: 15px;
 }
+
 a.changeimage {
     font-family: Kanit;
     font-style: normal;
@@ -26,6 +50,7 @@ a.changeimage {
     text-decoration-line: underline;
     color: #FFFFFF;
 }
+
 a.profilelink {
     font-family: Kanit;
     font-style: normal;
@@ -40,12 +65,14 @@ a.profilelink {
     padding: 5px 10px;
     margin-top: 4%;
 }
-a.profilelink:hover {
+
+    a.profilelink:hover {
         background-color: #FFFFFF;
         color: #4C251B;
         outline: none;
-        text-decoration:none;
+        text-decoration: none;
     }
+
 .card2 {
     width: 100%;
     height: 95%;
@@ -57,6 +84,7 @@ a.profilelink:hover {
     padding-left: 20px;
     padding-right: 20px;
 }
+
 p.hello {
     display: contents;
     font-family: Kanit;
@@ -66,6 +94,7 @@ p.hello {
     line-height: 72px;
     color: #4C251B;
 }
+
 p.profilenameID {
     display: contents;
     font-family: Kanit;
@@ -75,6 +104,7 @@ p.profilenameID {
     line-height: 72px;
     color: #4C251B;
 }
+
 p.profilepersonal {
     display: inline;
     font-family: Kanit;
@@ -84,6 +114,7 @@ p.profilepersonal {
     line-height: 39px;
     color: #4C251B;
 }
+
 p.profileNoOrder {
     display: inline;
     font-family: Kanit;
@@ -94,6 +125,7 @@ p.profileNoOrder {
     color: #4C251B;
     margin-left: -25%;
 }
+
 p.profileOrderdetail {
     display: inline;
     font-family: Kanit;
@@ -103,6 +135,7 @@ p.profileOrderdetail {
     line-height: 39px;
     color: #4C251B;
 }
+
 a.profilechangepersonal {
     display: inline;
     font-family: Kanit;
@@ -116,6 +149,7 @@ a.profilechangepersonal {
     color: #C36643;
     outline: none;
 }
+
 img.imgchangepersonal {
     display: inline;
     float: right;
@@ -126,6 +160,7 @@ img.imgchangepersonal {
     outline: none;
     padding-right: 3px;
 }
+
 img.imgsavepersonal {
     display: inline;
     float: right;
@@ -136,6 +171,7 @@ img.imgsavepersonal {
     outline: none;
     padding-right: 3px;
 }
+
 p.profilepersonaldetail {
     display: inline;
     font-family: Kanit;
@@ -147,6 +183,7 @@ p.profilepersonaldetail {
     float: left;
     margin-top: -1%;
 }
+
 p.orderlistdetail1 {
     display: inline;
     font-family: Kanit;
@@ -158,6 +195,7 @@ p.orderlistdetail1 {
     float: left;
     margin-top: 5%;
 }
+
 p.orderlistdetail2 {
     display: inline;
     font-family: Kanit;
@@ -170,6 +208,7 @@ p.orderlistdetail2 {
     margin-top: 5%;
     margin-left: -6%;
 }
+
 p.orderlistdetail3 {
     display: inline;
     font-family: Kanit;
@@ -182,6 +221,7 @@ p.orderlistdetail3 {
     margin-top: 5%;
     margin-left: -15%;
 }
+
 p.profilepersonaldata {
     display: inline;
     font-family: Kanit;
@@ -194,6 +234,7 @@ p.profilepersonaldata {
     padding-right: 16px;
     margin-top: -1%;
 }
+
 a.profilechangepassword {
     display: block;
     font-family: Kanit;
@@ -209,6 +250,46 @@ a.profilechangepassword {
     margin-top: -3.5%;
     padding-right: 16px;
 }
+
+.admin-select {
+    width: 10%;
+    display: inline;
+    border: 1.5px solid #4C251B;
+}
+
+img.admin-product {
+    width: 90%;
+    height: 50%;
+    margin-left: 6%;
+}
+
+img.bgprofile1 {
+    position: fixed;
+    width: 35%;
+    margin-top: -7%;
+    height: 70%;
+}
+
+img.bgprofile2 {
+    position: fixed;
+    width: 35%;
+    margin-left: 65%;
+    margin-top: 15%;
+    height: 70%;
+}
+
+@media screen and (max-width:1250px) {
+    img.admin-product {
+        width: 80%;
+        height: 40%;
+        margin-left: 9%;
+    }
+
+    table.ordertable {
+        height: 275px !important;
+    }
+}
+
 @media screen and (max-width:991px) {
     .card1 {
         width: 130%;
@@ -228,7 +309,38 @@ a.profilechangepassword {
     img.imgsavepersonal {
         margin-top: 18%;
     }
+
+    img.admin-product {
+        width: 100%;
+        height: 37%;
+        margin-left: -2%;
+    }
 }
+
+
+@media screen and (max-width:1250px) {
+    img.bgprofile2 {
+        width: 30%;
+        margin-left: 70%;
+        margin-top: 20%;
+    }
+
+    img.bgprofile1 {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:991px) {
+    img.bgprofile2 {
+        height: 60%;
+        margin-top: 30%;
+    }
+
+    img.bgprofile1 {
+        height: 60%;
+    }
+}
+
 @media screen and (max-width:850px) {
     .card1 {
         width: 100%;
@@ -239,7 +351,18 @@ a.profilechangepassword {
         width: 100%;
         height: 95%;
     }
+
+    input.inputchangepersonal {
+        font-size: 11px;
+    }
 }
+
+@media screen and (max-width:820px) {
+    table.ordertable {
+        height: 260px !important;
+    }
+}
+
 @media screen and (max-width:769px) {
     .card1 {
         width: 100%;
@@ -258,7 +381,18 @@ a.profilechangepassword {
     img.imgsavepersonal {
         margin-top: 24%;
     }
+
+    img.admin-product {
+        width: 100%;
+        height: 25%;
+        margin-left: -2%;
+    }
+
+    table.ordertable {
+        height: 150px !important;
+    }
 }
+
 @media screen and (max-width:768px) {
     .card1 {
         width: 100% !important;
@@ -269,6 +403,7 @@ a.profilechangepassword {
         width: 100% !important;
     }
 }
+
 @media screen and (max-width:640px) {
     .card1 {
         width: 120%;
@@ -287,10 +422,30 @@ a.profilechangepassword {
         margin-top: 26%;
     }
 }
+
+@media screen and (max-width:600px) {
+    img.bgprofile2 {
+        width: 50%;
+        height: 40%;
+        margin-left: 60%;
+        margin-top: 40%;
+    }
+
+    img.bgprofile1 {
+        width: 50%;
+        height: 40%;
+        margin-top: -5%;
+    }
+}
+
 @media screen and (max-width:580px) {
     .card1 {
         width: 100%;
         margin-left: 0%;
+    }
+
+    p.profilenamecard1 {
+        padding: 0px 0px;
     }
 
     a.changeimage {
@@ -338,47 +493,76 @@ a.profilechangepassword {
     }
 
     input.inputchangepersonal {
-        width: 60% !important;
+        width: 50% !important;
+    }
+
+    .font2 {
+        font-size: 1.8vw !important;
     }
 }
+
 @media screen and (max-width:500px) {
     p.orderlistdetail1, p.orderlistdetail2, p.orderlistdetail3 {
         font-size: 1.7vw;
     }
+
+    a.profilelink {
+        padding: 0px 0px;
+    }
 }
+
 @media screen and (max-width:480px) {
     .card1 {
         width: 120%;
     }
 }
-@media screen and (max-width:383px) {
-    .card1 {
-        height: 70vh;
-    }
-}
-@media screen and (max-width:350px) {
-    .card1 {
-        width: 170%;
-    }
 
-    .card2 {
-        width: 100%;
-    }
-
-    a.changeimage {
-        font-size: 1.4vw;
-    }
-
-    a.profilelink {
+@media screen and (max-width:450px) {
+    .font2 {
         font-size: 1.6vw;
     }
 
-    p.hello {
-        font-size: 2.5vw;
+    .card2 {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
-    p.profilenameID {
-        font-size: 2.5vw;
+    img.bgprofile2 {
+        height: 35%;
+        margin-top: 60%;
+    }
+}
+
+@media screen and (max-width:383px) {
+    .card1 {
+        height: 70vh;
+        margin-left: 16px !important;
+        width: 120% !important;
+    }
+
+    table.ordertable {
+        height: 200px !important;
+    }
+}
+
+@media screen and (max-width:380px) {
+    a.profilelink {
+        font-size: 1.1vw;
+    }
+
+    img.bgprofile2 {
+        height: 30%;
+        margin-top: 80%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .card1 {
+        width: 120% !important;
+    }
+
+    .card2 {
+        width: 100% !important;
     }
 
     p.profilepersonal {
@@ -414,23 +598,16 @@ a.profilechangepassword {
         margin-left: 17%;
     }
 }
-@media screen and (max-width:380px) {
-    img.imgpersonal {
-        width: 120%;
-        margin-left: -10%;
-    }
 
-    a.profilelink {
-        font-size: 1.1vw;
-    }
-}
 @media screen and (max-width:300px) {
     .card1 {
-        width: 190%;
+        width: 160% !important;
     }
 
     .card2 {
-        width: 100%;
+        width: 100% !important;
+        padding-left: 10px;
+        padding-right: 0px;
     }
 
     a.changeimage {
@@ -480,27 +657,22 @@ a.profilechangepassword {
     input.changeaddress {
         width: 55%;
     }
+
+    input.inputchangepersonal {
+        margin-right: 0% !important;
+    }
 }
+
+@media screen and (max-width:281px) {
+    p.profilenamecard1 {
+        font-size: 3vw;
+    }
+}
+
 @media screen and (max-width:288px) {
     .card1 {
-        width: 230%;
+        width: 150% !important;
         margin-left: 0%;
-    }
-
-    a.changeimage {
-        font-size: 0.9vw;
-    }
-
-    a.profilelink {
-        font-size: 1.2vw;
-    }
-
-    p.hello {
-        font-size: 2.1vw;
-    }
-
-    p.profilenameID {
-        font-size: 2.1vw;
     }
 
     p.profilepersonal {
@@ -536,14 +708,15 @@ a.profilechangepassword {
     }
 }
 /*Orderlist*/
-th.orderth {
+th, .orderth {
     width: 1%;
     display: table-cell;
 }
+
 table.ordertable {
-    height: auto;
-    display: block;
+    height: 320px;
     overflow-y: auto;
+    display: block;
 }
 
 /*ChangePersonal*/
@@ -555,6 +728,7 @@ input.inputchangepersonal {
     margin-right: 15%;
     border: 1.5px solid #4C251B;
 }
+
 input.changepassword {
     display: inline;
     width: 70%;
@@ -562,6 +736,7 @@ input.changepassword {
     float: right;
     border: 1.5px solid #4C251B;
 }
+
 input.changeaddress {
     display: inline;
     width: 70%;
@@ -569,6 +744,7 @@ input.changeaddress {
     float: right;
     border: 1.5px solid #4C251B;
 }
+
 input.submitchangepersonal {
     font-family: Kanit;
     font-style: normal;
@@ -587,39 +763,13 @@ input.submitchangepersonal {
     margin-top: 7%;
     margin-left: 35%;
 }
-input.submitchangepersonal:hover {
-        background-color: #FFFFFF;
-        color: #4C251B;
-        outline: none;
-    }
-input.submitchangeaddress {
-    font-family: Kanit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1vw;
-    line-height: 30px;
-    text-align: center;
-    color: #FFFFFF;
-    border-radius: 30px;
-    background-color: #4C251B;
-    border: 2px solid #4C251B;
-    cursor: pointer;
-    padding-right: 10px;
-    padding-left: 10px;
-    outline: none;
-    margin-top: 0%;
-    margin-left: 40%;
-}
-input.submitchangeaddress:hover {
-        background-color: #FFFFFF;
-        color: #4C251B;
-        outline: none;
-    }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 .deletetable {
     border-collapse: collapse;
     border-spacing: 0;
@@ -627,19 +777,21 @@ input::-webkit-inner-spin-button {
     border: 1px solid #ddd;
 }
 
-.intable1{
+.intable1 {
     text-align: left;
-    padding: 8px;
+    padding: 8px 0px;
 }
+
 .topic:nth-child(even) {
     background-color: #f2f2f2
 }
-.file{
-    width:50%;
-    font-family:Kanit;
+
+.file {
+    width: 50%;
+    font-family: Kanit;
 }
+
 a.cancel {
-    
     border: 1px solid transparent;
     border-radius: 30px;
     background-color: #F8523B;
@@ -652,17 +804,39 @@ a.cancel {
     text-decoration: none;
     margin-left: 2%;
 }
-a.cancel:hover {
-    background-color: #F57A64;
-    text-decoration:none;
-    color:#ffffff;
-}
+
+    a.cancel:hover {
+        background-color: #F57A64;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
 .font {
     font-family: Kanit;
     padding-top: 50px;
 }
+
 .font2 {
     font-family: Kanit;
     font-size: 1vw;
+    text-align: center;
 }
 
+a.edit {
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: #EFF44A;
+    color: #000000;
+    width: 20%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+    margin-left: 2%;
+}
+
+    a.edit:hover {
+        background-color: #EFF1A9;
+        text-decoration: none;
+    }
