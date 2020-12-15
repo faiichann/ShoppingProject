@@ -1,0 +1,94 @@
+﻿
+<link href="~/Content/css/Admin-data.css" rel="stylesheet" />
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="bgprofile1" style="background-image:url()">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <div class="card1">
+                    <div class="container">
+                        <center>
+                            <a href="~/Admin/DataVisual" class="profilelink">ข้อมูลยอดขาย</a><br /><br /><br />
+                            <a href="~/Admin/Add" class="profilelink">เพิ่มสินค้า</a><br /><br /><br />
+                            <a href="~/Admin/Index" class="profilelink">คลังสินค้า</a><br /><br /><br />
+                            <a href="#" class="profilelink">ออกจากระบบ</a><br /><br /><br />
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-9">
+                <div class="card2">
+                    <div class="container">
+                        <p class="hello">
+                            Admin Manager
+                        </p>
+                        <br />
+                        <p class="profilepersonal">
+                            คลังสินค้า
+                        </p><br /><br />
+                        <div style="overflow-x:auto;">
+                            <table class="deletetable ordertable">
+                                <tr class="topic">
+                                    <th class="intable1 orderth font2">ประเภท</th>
+                                    <th class="intable1 orderth font2">รูปสินค้า</th>
+                                    <th class="intable1 orderth font2">โค้ดสินค้า</th>
+                                    <th class="intable1 orderth font2">ชื่อสินค้า</th>
+                                    <th class="intable1 orderth font2">ราคาสินค้า</th>
+                                    <th class="intable1 orderth font2">จำนวนสินค้า</th>
+                                    <th class="intable1 orderth font2"></th>
+                                    <th class="intable1 orderth font2"></th>
+                                </tr>
+                                <tr class="topic">
+                                    <td class="intable1 orderth font2">ผัก</td>
+                                    <td class="intable1 orderth"><img class="admin-product" src="~/lib/images/shop1.png" /></td>
+                                    <td class="intable1 orderth font2">CK8622</td>
+                                    <td class="intable1 orderth font2">ผักปลา</td>
+                                    <td class="intable1 orderth font2">50</td>
+                                    <td class="intable1 orderth font2">30</td>
+                                    <td class="intable1 orderth font2"><a class="edit font" href="~/Admin/Edit">Edit</a></td>
+                                    <td class="intable1 orderth font2"><a class="cancel" href="#delete">Delete</a></td>
+                                </tr>
+                                <tr class="topic">
+                                    <td class="intable1 orderth font2">เนื้อ</td>
+                                    <td class="intable1 orderth"><img class="admin-product" src="~/lib/images/shop20.png" /></td>
+                                    <td class="intable1 orderth font2">CK8622</td>
+                                    <td class="intable1 orderth font2">ปลาผัก</td>
+                                    <td class="intable1 orderth font2">50</td>
+                                    <td class="intable1 orderth font2">60</td>
+                                    <td class="intable1 orderth font2"><a class="edit font" href="~/Admin/Edit">Edit</a></td>
+                                    <td class="intable1 orderth font2"><a class="cancel" href="#delete">Delete</a></td>
+                                </tr>
+                                <tr class="topic">
+                                    <td class="intable1 orderth font2">ผัก</td>
+                                    <td class="intable1 orderth"><img class="admin-product" src="~/lib/images/shop2.png" /></td>
+                                    <td class="intable1 orderth font2">CK8622</td>
+                                    <td class="intable1 orderth font2">ผักง่วง</td>
+                                    <td class="intable1 orderth font2">50</td>
+                                    <td class="intable1 orderth font2">60</td>
+                                    <td class="intable1 orderth font2"><a class="edit font" href="~/Admin/Edit">Edit</a></td>
+                                    <td class="intable1 orderth font2"><a class="cancel" href="#delete">Delete</a></td>
+                                </tr>
+
+                                <tr class="topic">
+                                    <td class="intable1 orderth font2">ผัก</td>
+                                    <td class="intable1 orderth"><img class="admin-product" src="~/lib/images/shop3.png" /></td>
+                                    <td class="intable1 orderth font2">CK8622</td>
+                                    <td class="intable1 orderth font2">ผักอยากนอน</td>
+                                    <td class="intable1 orderth font2">50</td>
+                                    <td class="intable1 orderth font2">60</td>
+                                    <td class="intable1 orderth font2"><a class="edit font" href="~/Admin/Edit">Edit</a></td>
+                                    <td class="intable1 orderth font2"><a class="cancel" href="#delete">Delete</a></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
