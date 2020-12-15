@@ -5,4 +5,65 @@
 
 <img class="bgprofile1" src="~/lib/images/bgprofile1.png" />
 <img class="bgprofile2" src="~/lib/images/bgprofile2.png" />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <div class="card1">
+                <div class="container">
+                    <center>
+                        <a href="~/Admin/DataVisual" class="profilelink">ข้อมูลยอดขาย</a><br /><br /><br />
+                        <a href="~/Admin/Add" class="profilelink">เพิ่มสินค้า</a><br /><br /><br />
+                        <a href="~/Admin/Index" class="profilelink">คลังสินค้า</a><br /><br /><br />
+                        <a href="#" class="profilelink">ออกจากระบบ</a><br /><br /><br />
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-9">
+            <div class="card2">
+                <div class="container">
+                    <p class="hello">
+                        Admin Manager
+                    </p>
+                    <br />
+                    <p class="profilepersonal">
+                        เพิ่มสินค้า
+                    </p><br /><br />
+                    <form>
+                        <p class="profilepersonaldetail">
+                            เลือกชนิดของสินค้า
+                        </p>&nbsp;&nbsp;&nbsp;
+                        <select class="admin-select">
+                            <option value="Vegetable">ผัก</option>
+                            <option value="Meat">เนื้อ</option>
+                        </select>
+                        <br /><br />
+                        <p class="profilepersonaldetail">
+                            รหัสสินค้า
+                        </p>
+                        <input type="number" class="inputchangepersonal form-control" /><br /><br /><br />
+                        <p class="profilepersonaldetail">
+                            ชื่อสินค้า
+                        </p>
+                        <input type="text" class="inputchangepersonal form-control" /><br /><br /><br />
+                        <p class="profilepersonaldetail">
+                            ราคา
+                        </p>
+                        <input type="number" class="inputchangepersonal form-control" /><br /><br /><br />
+                        <p class="profilepersonaldetail">
+                            จำนวน
+                        </p>
+                        <input type="number" class="inputchangepersonal form-control" /><br /><br /><br />
+                        <p class="profilepersonaldetail">
+                            รูปสินค้า
+                        </p>
+                        <input type="file" class="inputchangepersonal file" id="myFile" name="filename">
+                        <input type="submit" class="submitchangepersonal" value="ยืนยันการแก้ไข" /><br /><br />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
