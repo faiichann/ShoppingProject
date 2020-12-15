@@ -241,6 +241,21 @@ img.admin-product {
     margin-left: 6%;
 }
 
+img.bgprofile1 {
+    position: fixed;
+    width: 35%;
+    margin-top: -7%;
+    height: 70%;
+}
+
+img.bgprofile2 {
+    position: fixed;
+    width: 35%;
+    margin-left: 65%;
+    margin-top: 15%;
+    height: 70%;
+}
+
 @media screen and (max-width:1250px) {
     img.admin-product {
         width: 80%;
@@ -280,19 +295,6 @@ img.admin-product {
     }
 }
 
-img.bgprofile1 {
-    position: fixed;
-    width: 35%;
-    margin-top: -7%;
-    height:70%;
-}
-img.bgprofile2 {
-    position: fixed;
-    width: 35%;
-    margin-left: 65%;
-    margin-top: 15%;
-    height: 70%;
-}
 
 @media screen and (max-width:1250px) {
     img.bgprofile2 {
