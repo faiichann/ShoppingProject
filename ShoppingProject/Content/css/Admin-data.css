@@ -123,7 +123,6 @@ p.profileNoOrder {
     font-size: 1.3vw;
     line-height: 39px;
     color: #4C251B;
-    margin-left: -25%;
 }
 
 p.profileOrderdetail {
@@ -206,7 +205,7 @@ p.orderlistdetail2 {
     color: #4C251B;
     float: left;
     margin-top: 5%;
-    margin-left: -6%;
+    margin-left: 5%;
 }
 
 p.orderlistdetail3 {
@@ -219,7 +218,7 @@ p.orderlistdetail3 {
     color: #4C251B;
     float: left;
     margin-top: 5%;
-    margin-left: -15%;
+    margin-left: 5%;
 }
 
 p.profilepersonaldata {
