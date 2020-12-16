@@ -400,3 +400,6 @@ a.addcartbtn {
         font-size: 3.4vw;
     }
 }
+a{
+    cursor:pointer !important;
+}
