@@ -269,7 +269,6 @@ a.logo{
     border: 0px solid #EFD89A;
     font-size: 18px;
     font-family: Kanit;
-    float: right;
     color: #435E39 !important;
     padding-top: 5px !important;
     padding-left: 10px !important;
@@ -278,7 +277,6 @@ a.logo{
     text-decoration: none;
     width: 150px;
     display: inline;
-    margin-right:-100%;
 }
 
 .navss {
