@@ -12,7 +12,7 @@
 @if (Session["UserID"] != null)
 {
 
-    <div class="container">
+    <div class="container"  style="margin-top: 10%">
         <h4 class="fontreceipt text-center">Receipt</h4><br />
 
         <div class="card1">
@@ -108,7 +108,7 @@
             <hr class="line" /><br />
         </div>
         <br /><br /><br />
-        <a class="payment" onclick="window.print()">พิมพ์ใบเสร็จ</a>
-        <a href="/Shop/Payment" class="payment">ชำระเงิน</a>><br /><br /><br /><br /><br /><br /><br />
+        <a class="payment" onclick="window.print()" style="padding:10px;">พิมพ์ใบเสร็จ</a>
+        <a href="/Shop/Payment" class="payment" style="padding:10px;">ชำระเงิน</a><br /><br /><br /><br /><br /><br /><br />
     </div>
 }

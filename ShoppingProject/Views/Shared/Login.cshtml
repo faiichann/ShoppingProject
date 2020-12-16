@@ -5,21 +5,12 @@
 
 @if (Session["UserID"] != null)
 {
-    <div class="nav-item">
-        <a class="navss" href="/Shop/Index">SHOP</a>
-    </div>
-    <div class="nav-item" style="float:right">
-        <div>
-            <span>Hello : <a class="navss" href="/Login/Profile">@Session["UserName"]</a></span>
-        </div>
-        <div>
-            <a class="navss" href="/Login/Logout">Logout</a>
-        </div>
-    </div>
+    <p class="navs">Welcome :</p>
+    <a class="navs" href="/Login/Profile">@Session["UserName"]</a>
+    <a class="navs" href="/Login/Logout">LOGOUT</a>
 }
-else { 
-<div class="nav-item topnav-right">
+else
+{
     <a class="navs" href="/Login/index">ลงชื่อเข้าสู่ระบบ</a>
-</div>
 }
 

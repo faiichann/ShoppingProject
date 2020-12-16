@@ -32,7 +32,44 @@
                 </div>
             </div>
         </div>*@
-    <header class="main_menu home_menu topnav">
+    <header class="navnew">
+        <nav class="navbar navbar-expand-lg navnew" style="margin-bottom:0px">
+            <a class="logo" href="/Home/Index"><img class="img-logo" src="~/lib/images/semilogo.png"></a>
+            <button class="navbar-toggler mybtn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto navbarnew">
+                    <li class="nav-item">
+                        <a class="navss" href="/Home/Index">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navss" href="/Home/Aboutus">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navss" href="/Home/Contact">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navss" href="/Shop/Index">SHOP</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbarnew">
+                    <li class="nav-item">
+                        @Html.Partial("_Order")
+                        @Html.Partial("Login")
+
+                        @*<p class="navs">Welcome :</p>
+        <a class="navs" href="/Login/Profile">UserXXX</a>
+        <a class="navicon" href="/Login/index"></a><i class='fas fa-shopping-cart'></i>
+        <a class="navs" href="/Home/Contact">LOGOUT</a>*@
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    @*<header class="main_menu home_menu topnav">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <img class="img-logo" src="~/lib/images/semilogo.png" width="30" height="30" alt="" loading="lazy">
@@ -58,7 +95,7 @@
                 </div>
             </nav>
         </div>
-    </header>
+    </header>*@
     <main role="main" class="pb-3">
         @RenderBody()
     </main>

@@ -131,13 +131,14 @@ a.payment{
     cursor: pointer;
     outline: none;
     margin-left:25%;
+    padding: 10px;
 }
-a.payment:hover {
-    background-color: #4C251B;
-    color: #FFFFFF;
-    outline: none;
-
-}
+    a.payment:hover {
+        background-color: #4C251B;
+        color: #FFFFFF;
+        outline: none;
+        padding: 10px;
+    }
 @media screen and (max-width:1199px){
     .logo {
         width: 30%;

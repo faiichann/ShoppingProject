@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using ShoppingProject.Models;
 using ShoppingProject.ViewModel;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace ShoppingProject.Controllers
 {
@@ -30,7 +31,7 @@ namespace ShoppingProject.Controllers
                                                     Li_Price = (decimal)e.It_Price,
                                                     Li_Unit = (int)e.It_Unit
                                                 }).ToList();
-
+            Session["Product"] = listStore;
             return View(listStore);
         }
         public ActionResult Add()
@@ -68,7 +69,7 @@ namespace ShoppingProject.Controllers
 
             return Json(data: new { Success = true, Message = " Add Successfully" }, JsonRequestBehavior.AllowGet);
         }
-        public ActionResult Edit()
+        public ActionResult Edit(Guid id)
         {
             IEnumerable<ListModel> listStore = (from e in db.tbItems
                                                 join s in db.tbTypes
@@ -84,17 +85,59 @@ namespace ShoppingProject.Controllers
                                                     Li_Price = (decimal)e.It_Price,
                                                     Li_Unit = (int)e.It_Unit
                                                 }).ToList();
-
+            Session["Product"] = listStore;
+            var DataItem = db.tbItems.Where(x => x.It_Id == id ).SingleOrDefault();
+            var store = listStore.Where(s => s.Li_Id == id).SingleOrDefault();
+            if(store != null)
+            {
+                Session["Id"] = store.Li_Id.ToString();
+                Session["Img"] = store.Li_Img.ToString();
+                Session["Type"] = store.Type.ToString();
+                Session["Code"] = store.li_Code.ToString();
+                Session["Name"] = store.Li_Name.ToString();
+                Session["Des"] = store.Li_Des.ToString();
+                Session["Price"] = store.Li_Price.ToString();
+                Session["Unit"] = store.Li_Unit.ToString();
+            }
             return View(listStore);
 
         }
         public ActionResult Data()
         {
+            List<DataModel> dataPoints = new List<DataModel>{
+                new  DataModel(10, 22),
+                new  DataModel(20, 36),
+                new  DataModel(30, 42),
+                new  DataModel(40, 51),
+                new  DataModel(50, 46),
+            };
+
+            ViewBag.DataPoints = JsonConvert.SerializeObject(dataPoints);
             return View();
         }
-        public ActionResult Delete()
+        public ActionResult Delete(Guid id)
         {
-            return View();
+            List<ListModel> cart = (List<ListModel>)Session["product"];
+            var del = cart.Find(m => m.Li_Id == id);
+            cart.Remove(del);
+            Session["product"] = cart;
+            db.SaveChanges();
+
+            return View("Index", cart);
+            //if ( id !=null)
+            //{
+            //    var del = (from c in db.tbItems
+            //               where c.It_Id == id
+            //               select c).FirstOrDefault();
+            //    List<ListModel> cart = (List<ListModel>)Session["Product"];
+            //    cart.Find(m => m.Li_Id == id);
+            //    cart.Remove(del);
+            //    Session["Product"] = cart;
+            //    db.tbItems.Remove(del);
+            //    db.SaveChanges();
+                
+            //}
+            //return View("Index");
         }
     }
 }

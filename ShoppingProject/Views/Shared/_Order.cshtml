@@ -3,11 +3,11 @@
         <li class="nav-item">
             @if (Session["CartCounter"] == null)
             {
-                @Html.ActionLink("Cart", "Order", "Shop", htmlAttributes: new { id = "cartitem" })
+                @Html.ActionLink("Cart", "Order", "Shop", htmlAttributes: new { id = "cartitem", @class = "navicon" })
             }
             else
             {
-                @Html.ActionLink("Cart(" + Session["CartCounter"] + ")", "Order", "Shop", htmlAttributes: new { id = "cartitem" })
+                @Html.ActionLink("Cart(" + Session["CartCounter"] + ")", "Order", "Shop", htmlAttributes: new { id = "cartitem",@class = "navicon" })
             }
         </li>
     </ul>

@@ -7,7 +7,7 @@
 {
     <img class="bgprofile1" src="~/lib/images/bgprofile1.png" />
     <img class="bgprofile2" src="~/lib/images/bgprofile2.png" />
-    <div class="container">
+    <div class="container"  style="margin-top: 10%">
         <div class="row justify-content-center">
             <div class="col-3">
                 <div class="card1">
@@ -56,8 +56,8 @@
                                 <td class="intable1 orderth font2">@item.Li_Des</td>
                                 <td class="intable1 orderth font2">@item.Li_Price บาท</td>
                                 <td class="intable1 orderth font2">@item.Li_Unit บาท</td>
-                                <td class="intable1 orderth font2"><a class="edit font" href="/Admin/Edit" id="@item.Li_Id">Edit</a></td>
-                                <td class="intable1 orderth font2"><a class="cancel" href="/Admin/Delete" id="@item.Li_Id">Delete</a></td>
+                                <td class="intable1 orderth font2">@Html.ActionLink("Edit", "Edit", "Admin", new { id = item.Li_Id, @class = "fa fa-trash edit font" }, null)</td>
+                                <td class="intable1 orderth font2">@Html.ActionLink("Delete", "Delete", "Admin", new { id = item.Li_Id, @class = "fa fa-trash" }, null)</td>
                             </tr>
                                 }
 

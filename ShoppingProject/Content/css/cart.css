@@ -95,7 +95,7 @@ a.cancel {
     padding-top: 12px;
     padding-bottom: 1%;
     text-decoration: none;
-    margin-left: 2%;
+    margin-left: 30%;
     margin-top: 2%;
 }
 
@@ -110,7 +110,7 @@ a.cancel:hover {
 .fontcon {
     font-family: Kanit;
     padding-top: 12px;
-    margin-left: 38%;
+    margin-left: 5%;
 }
 
 img.img-cart {

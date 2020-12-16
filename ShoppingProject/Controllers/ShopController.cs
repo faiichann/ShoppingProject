@@ -17,22 +17,30 @@ namespace ShoppingProject.Controllers
         // GET: Shop
         public ActionResult Index()
         {
-            IEnumerable<ListModel> listStore = (from e in db.tbItems
-                                                join s in db.tbTypes
-                                                on e.Type_Id equals s.Type_Id
-                                                select new ListModel()
-                                                {
-                                                    Li_Id = e.It_Id,
-                                                    Li_Img = e.It_Img,
-                                                    Type = s.Type_Name,
-                                                    li_Code = e.It_Code,
-                                                    Li_Name = e.It_Name,
-                                                    Li_Des = e.It_Des,
-                                                    Li_Price = (decimal)e.It_Price,
-                                                    Li_Unit = (int)e.It_Unit
-                                                }).ToList();
+            if (Session["UserID"] != null)
+            {
+                IEnumerable<ListModel> listStore = (from e in db.tbItems
+                                                    join s in db.tbTypes
+                                                    on e.Type_Id equals s.Type_Id
+                                                    select new ListModel()
+                                                    {
+                                                        Li_Id = e.It_Id,
+                                                        Li_Img = e.It_Img,
+                                                        Type = s.Type_Name,
+                                                        li_Code = e.It_Code,
+                                                        Li_Name = e.It_Name,
+                                                        Li_Des = e.It_Des,
+                                                        Li_Price = (decimal)e.It_Price,
+                                                        Li_Unit = (int)e.It_Unit
+                                                    }).ToList();
 
-            return View(listStore);
+                return View(listStore);
+            }
+            else
+            {
+                return RedirectToAction("Index","Login");
+            }
+           
         }
         [HttpPost]
         public JsonResult Index(string ItemID)
@@ -116,9 +124,10 @@ namespace ShoppingProject.Controllers
                 }
                 Session["cartitem"] = null;
                 Session["CartCounter"] = null;
+                Session["OrderId"] = order.OrderId.ToString();
                 Session["OrderNo"] = order.OrderNo.ToString();
                 Session["OrderDate"] = order.OrderDate.ToString();
-
+           
 
             IEnumerable<BillModel> listbill = (from b in db.tbBills
                                                 join o in db.tbOrders

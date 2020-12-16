@@ -7,7 +7,7 @@
 
 <img class="bgprofile1" src="~/lib/images/bgprofile1.png" />
 <img class="bgprofile2" src="~/lib/images/bgprofile2.png" />
-<div class="container">
+<div class="container"  style="margin-top: 10%">
     <div class="row justify-content-center">
         <div class="col-3">
             <div class="card1">
@@ -45,24 +45,24 @@
                         <p class="profilepersonaldetail">
                             รหัสสินค้า
                         </p>
-                        <input type="number" class="inputchangepersonal form-control" /><br /><br /><br />
+                        <input type="number" class="inputchangepersonal form-control" value="@Session["Code"]" /><br /><br /><br />
                         <p class="profilepersonaldetail">
                             ชื่อสินค้า
                         </p>
-                        <input type="text" class="inputchangepersonal form-control" /><br /><br /><br />
+                        <input type="text" class="inputchangepersonal form-control" value="@Session["Name"]" /><br /><br /><br />
                         <p class="profilepersonaldetail">
                             ราคา
                         </p>
-                        <input type="number" class="inputchangepersonal form-control" /><br /><br /><br />
+                        <input type="number" class="inputchangepersonal form-control" value="@Session["Price"]" /><br /><br /><br />
                         <p class="profilepersonaldetail">
                             จำนวน
                         </p>
-                        <input type="number" class="inputchangepersonal form-control" /><br /><br /><br />
+                        <input type="number" class="inputchangepersonal form-control" value="@Session["unit"]" /><br /><br /><br />
                         <p class="profilepersonaldetail">
                             รูปสินค้า
                         </p>
                         <input type="file" class="inputchangepersonal file" id="myFile" name="filename">
-                        <input type="submit" class="submitchangepersonal" value="ยืนยันการแก้ไข" /><br /><br />
+                        <input type="submit" class="submitchangepersonal" value="ยืนยันการแก้ไข" Finish() /><br /><br />
                     </form>
                 </div>
             </div>
@@ -71,4 +71,10 @@
 </div>
 
 
+<script type="text/javascript">
 
+    function Finish() {
+        alert("กรุณารอการอัพเดตสักครู่")
+
+    }
+</script>

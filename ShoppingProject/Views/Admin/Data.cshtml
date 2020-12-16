@@ -1,4 +1,4 @@
-﻿
+﻿<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 @{
     ViewBag.Title = "Data";
 }
@@ -6,7 +6,7 @@
 
 <img class="bgprofile1" src="~/lib/images/bgprofile1.png" />
 <img class="bgprofile2" src="~/lib/images/bgprofile2.png" />
-<div class="container">
+<div class="container"  style="margin-top: 10%">
     <div class="row justify-content-center">
         <div class="col-3">
             <div class="card1">
@@ -32,8 +32,71 @@
                     <p class="profilepersonal">
                         ข้อมูลยอดขาย
                     </p><br /><br />
+                    <div id="chartContainer" style="height:300px" >
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+
+		window.onload = function () {
+			var chart = new CanvasJS.Chart("chartContainer", {
+				theme: "light2",
+				animationEnabled: true,
+				title: {
+					text: "Sell Data Each Month "
+				},
+				subtitles: [
+					{ text: "ข้อมูลการขายสินค้าในแต่ละเดือน" }
+				],
+				data: [
+					{
+                    name: "ผัก",
+                    showInLegend: true,
+					type: "column", //change type to bar, line, area, pie, etc
+					color: "#3CB371",
+					dataPoints: [
+					{ x: 1, y: 71 , label: "JAN"},
+					{ x: 2, y: 55 , label: "FEB"},
+					{ x: 3, y: 50 , label: "MAR"},
+					{ x: 4, y: 65 , label: "APL"},
+					{ x: 5, y: 95 , label: "MAY"},
+					{ x: 6, y: 68 , label: "JUN"},
+					{ x: 7, y: 28 , label: "JULY"},
+					{ x: 8, y: 34 , label: "SEP"},
+					{ x: 9, y: 14 , label: "AUG"},
+					{ x: 10, y: 14 , label: "OCT"},
+					{ x: 11, y: 14 , label: "NOV"},
+                    { x: 12, y: 25 , label: "DEC"}
+					]
+                                        //Uncomment below line to add data coming from the controller.
+					//dataPoints: @Html.Raw(ViewBag.DataPoints),
+					},
+					{
+                        name: "เนื้อ",
+                        showInLegend: true,
+						type: "column",
+                        color: "#AF2020",
+                        dataPoints: [
+                            { x: 1, y: 50, label: "JAN" },
+                            { x: 2, y: 80, label: "FEB" },
+                            { x: 3, y: 63, label: "MAR" },
+                            { x: 4, y: 41, label: "APL" },
+                            { x: 5, y: 75, label: "MAY" },
+                            { x: 6, y: 50, label: "JUN" },
+                            { x: 7, y: 70, label: "JULY" },
+                            { x: 8, y: 10, label: "SEP" },
+                            { x: 9, y: 45, label: "AUG" },
+                            { x: 10, y: 23, label: "OCT" },
+                            { x: 11, y: 45, label: "NOV" },
+                            { x: 12, y: 60, label: "DEC" }
+                        ]
+                    }
+				]
+			});
+			chart.render();
+		};
+</script>
