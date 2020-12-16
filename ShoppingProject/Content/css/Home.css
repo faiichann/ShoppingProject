@@ -87,6 +87,16 @@ p.fban1 {
     }
 }
 
+@media screen and (max-width:970px) {
+    a.ban {
+        width:10%;
+    }
+}
+
+
+
+
+
 @media screen and (max-width:768px) {
     p.fban1 {
         font-size: 2vw;
@@ -101,6 +111,25 @@ p.fban1 {
         width: 35%;
         height: 65%;
         margin-left:60%;
+    }
+}
+
+@media screen and (max-width:640px) {
+    a.ban {
+        width: 11%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    a.ban {
+        width: 12%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    a.ban {
+        font-size:2.1vw;
+        width:19%;
     }
 }
 
@@ -125,6 +154,7 @@ a.ban {
     padding-top:0.5px;
     padding-bottom:1px;
     cursor:pointer;
+    width:9%;
 }
 
 a.ban:hover {
