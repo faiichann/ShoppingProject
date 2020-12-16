@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ShoppingProject.Models.tbItem>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" style="margin-top:5%">
+    <tr>
+        <th>
+            ชนิดสินค้า
+        </th>
+        <th>
+           รหัสสินค้า
+        </th>
+        <th>
+            ชื่อสินค้า
+        </th>
+        <th>
+            คำอธิบาย
+        </th>
+        <th>
+            ราคา
+        </th>
+        <th>
+           รูป
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.It_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.It_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.It_Des)
+        </td>
+        <td>
+           @Html.DisplayFor(modelItem => item.It_Price)
+        </td>
+        <td>
+            <img src="@Url.Content(item.It_Img)" style="width:100px" />
+        </td>
+    </tr>
+}
+
+</table>
+<center><a href="/Shop/Index">Back</a></center>

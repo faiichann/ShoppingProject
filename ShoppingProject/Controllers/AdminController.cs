@@ -139,5 +139,9 @@ namespace ShoppingProject.Controllers
             //}
             //return View("Index");
         }
+        public ActionResult Search(string search)
+        {
+            return View(db.tbItems.Where(x => x.It_Name.Contains(search) || search == null).ToList());
+        }
     }
 }

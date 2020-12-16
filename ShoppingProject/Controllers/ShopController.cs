@@ -144,6 +144,10 @@ namespace ShoppingProject.Controllers
 
             return View(listbill);
         }
+        public ActionResult Search(string search)
+        {
+            return View(db.tbItems.Where(x => x.It_Name.Contains(search) || search == null).ToList());
+        }
         public ActionResult Payment()
         {
             return View();

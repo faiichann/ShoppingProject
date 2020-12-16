@@ -386,6 +386,7 @@
     <Content Include="Views\Shared\_Order.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Data.cshtml" />
+    <Content Include="Views\Shop\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
