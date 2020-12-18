@@ -7,6 +7,9 @@ using ShoppingProject.Models;
 using ShoppingProject.ViewModel;
 using System.IO;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
+using System.Data.Entity;
+using System.Net;
 
 namespace ShoppingProject.Controllers
 {
@@ -142,6 +145,31 @@ namespace ShoppingProject.Controllers
         public ActionResult Search(string search)
         {
             return View(db.tbItems.Where(x => x.It_Name.Contains(search) || search == null).ToList());
+        }
+        public async Task<ActionResult> Edit1(Guid? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            tbItem item = await db.tbItems.FindAsync(id);
+            if (item == null)
+            {
+                return HttpNotFound();
+            }
+            return View(item);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit1([Bind(Include = "It_Id,Type_Id,It_Code,It_Name,It_Des,It_Img, It_ Price,It_Unit,It_Delete")] tbItem item)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(item).State = EntityState.Modified;
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View(item);
         }
     }
 }
